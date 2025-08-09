@@ -1,7 +1,7 @@
 {
-  "name": "finpath-pro-ux-vercel",
+  "name": "finpath-pro-ux-vercel-gestures",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
