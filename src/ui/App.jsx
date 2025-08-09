@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 
-const APP_KEY = "finpath:pro:v2";
+const APP_KEY = "finpath:pro:v2.1";
 
 const QUESTIONS = [
   { text: "Do you keep a monthly budget?", labels: ["Yes", "No"] },
@@ -16,10 +16,92 @@ const QUESTIONS = [
   { text: "Do you know what an index fund is?", labels: ["Yes", "No"] }
 ];
 
-// Long-form content (seeded from your expanded tracks)
-const TRACKS = [];
-// Fallback if JSON stripped by bundler
-const DATA = TRACKS && TRACKS.length ? TRACKS : [];
+const LONG_FORM = [
+  {
+    id:"foundations", name:"Foundations", color:"#16a34a", chapters:[
+      { id:"mindset", title:"Money Mindset & Habits", lessons:[
+        { id:"why-literacy", title:"Why Financial Literacy Matters in Canada", xp:10,
+          body:[
+            "Financial literacy is the toolkit for everyday decisions: how you bank, budget, borrow, save, insure, and invest.",
+            "Choices like TFSA vs RRSP have tax and cash‑flow consequences. Understanding the basics helps you avoid costly fees and high‑interest debt.",
+            "Small actions compound: automatic savings, comparing MERs, and reviewing statements can add thousands over time.",
+            "Build a habit of learning 5 minutes a day—the same way you’d practice a language."
+          ],
+          learnMore:[
+            {label:"FCAC – Financial literacy", href:"https://www.canada.ca/en/financial-consumer-agency.html"},
+            {label:"OSC – GetSmarterAboutMoney", href:"https://www.getsmarteraboutmoney.ca/"}
+          ],
+          quiz:[
+            { q:"Learning money skills can help you avoid bank fees.", labels:["True","False"] },
+            { q:"Financial literacy only matters if you earn a lot.", labels:["False","True"] }
+          ]
+        },
+        { id:"goals", title:"Setting Short- vs Long-Term Goals", xp:10,
+          body:[
+            "Short-term goals (1–3 years) include building a buffer or paying off a card. Long-term goals (5+ years) include retirement or a down payment.",
+            "Write goals with numbers and dates (e.g., ‘Save $150/month to reach $1,800 by June 30’).",
+            "Match the account to the goal: TFSAs are flexible for short/medium goals; RRSPs are designed for retirement savings.",
+            "Review quarterly and adjust contributions as income or expenses change."
+          ],
+          learnMore:[{label:"FCAC – Make a savings plan", href:"https://www.canada.ca/en/financial-consumer-agency/services/savings-investments/make-savings-plan.html"}],
+          quiz:[
+            { q:"Saving for retirement vs a trip next year: which is long-term?", labels:["Retirement","Trip next year"] },
+            { q:"Which account is primarily for retirement savings?", labels:["RRSP","TFSA"] }
+          ]
+        }
+      ]},
+      { id:"budgeting", title:"Budgeting Basics", lessons:[
+        { id:"what-budget", title:"What is a Budget?", xp:10,
+          body:[
+            "A budget is a written plan for income and expenses so you can see where money goes before it’s gone.",
+            "Start simple: list take‑home income, list spending by category, choose targets, and review monthly."
+          ],
+          learnMore:[{label:"FCAC – Budget planner", href:"https://itools-ioutils.fcac-acfc.gc.ca/BP-PB/budget-planner"}],
+          quiz:[
+            { q:"A budget only tracks spending.", labels:["False","True"] },
+            { q:"Primary purpose of a budget?", labels:["Plan & prioritize","Track receipts"] }
+          ]
+        }
+      ]}
+    ]
+  },
+  {
+    id:"investing-basics", name:"Investing Basics", color:"#0ea5e9", chapters:[
+      { id:"registered-accounts", title:"Registered Accounts", lessons:[
+        { id:"tfsa-intro", title:"TFSA: Tax‑Free Savings Account", xp:15,
+          body:[
+            "A TFSA lets investments grow tax‑free; withdrawals are also tax‑free.",
+            "Contribution room accumulates each year; withdrawals create room next year."
+          ],
+          learnMore:[{label:"CRA – TFSA", href:"https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account.html"}],
+          quiz:[
+            { q:"TFSA withdrawals are taxable.", labels:["False","True"] },
+            { q:"Contribution room returns the same year.", labels:["False","True"] }
+          ]
+        }
+      ]},
+      { id:"portfolio-basics", title:"Portfolio Basics", lessons:[
+        { id:"risk-return", title:"Risk & Return", xp:10,
+          body:["Higher potential returns come with higher volatility; match risk to time horizon."],
+          learnMore:[{label:"OSC – Risk & return", href:"https://www.getsmarteraboutmoney.ca/invest/investing-basics/risk/"}],
+          quiz:[
+            { q:"Stocks usually have more volatility than GICs.", labels:["True","False"] },
+            { q:"Higher return with zero risk is common.", labels:["False","True"] }
+          ]
+        }
+      ]}
+    ]
+  }
+];
+
+// Seed fallback to prevent blank 'Tracks'
+function seedTracks(){
+  if (Array.isArray(LONG_FORM) && LONG_FORM.length) return LONG_FORM;
+  return [{
+    id:"foundations", name:"Foundations", color:"#111111",
+    chapters:[{ id:"mindset", title:"Money Mindset & Habits", lessons:[{ id:"why", title:"Why Financial Literacy Matters", xp:10, body:["Starter lesson"], quiz:[{q:"Financial literacy helps.", labels:["True","False"]}] }]}]
+  }];
+}
 
 const prefersDark = typeof window !== "undefined" ? window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches : false;
 function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
@@ -32,9 +114,7 @@ function useTheme(){
   return { theme, setTheme };
 }
 
-function Card({children,className,style}){
-  return <div className={clsx("rounded-2xl shadow-elev", className)} style={{background:"var(--card)", ...style}}>{children}</div>;
-}
+function Card({children,className,style}){ return <div className={clsx("rounded-2xl shadow-elev", className)} style={{background:"var(--card)", ...style}}>{children}</div>; }
 function Button({children,onClick,variant="primary",className,disabled}){
   const base="focus-ring inline-flex items-center justify-center px-5 py-3 rounded-full text-sm font-semibold transition";
   const styles={ primary:"bg-[var(--fg)] text-[var(--bg)] hover:opacity-90", outline:"border border-[var(--fg)] text-[var(--fg)] hover:bg-[var(--fg)] hover:text-[var(--bg)]", ghost:"text-[var(--fg)] hover:bg-[var(--fg)]/10" }[variant];
@@ -46,25 +126,23 @@ function ProgressRing({value=0,size=120,stroke=10}){ const r=(size-stroke)/2; co
 
 function Header({onNav, theme, setTheme}){
   const [open, setOpen] = useState(false);
-  const navItems = [
-    { k: "home", label: "Home" },
-    { k: "tracks", label: "Tracks" },
-    { k: "progress", label: "Progress" },
-    { k: "account", label: "Account" },
-  ];
-  return <div className="sticky top-0 z-40 glass shadow-elev">
+  const navItems = [{k:"home",label:"Home"},{k:"tracks",label:"Tracks"},{k:"progress",label:"Progress"},{k:"account",label:"Account"}];
+  return <div className="sticky top-0 z-40" style={{background:"color-mix(in oklab, var(--card) 80%, transparent)", backdropFilter:"saturate(180%) blur(12px)"}}>
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <div className="flex items-center gap-3"><div className="w-8 h-8 rounded-lg" style={{background:"var(--fg)"}}/><span className="font-extrabold tracking-tight text-base sm:text-lg">FinPath</span></div>
-      <div className="hidden md:flex items-center gap-2">{navItems.map(({k,label})=>(<Button key={k} variant="ghost" onClick={()=>onNav(k)}>{label}</Button>))}<Button variant="ghost" onClick={()=>setTheme(theme==="dark"?"light":"dark")} aria-label="Toggle theme">{theme==="dark"?"Light":"Dark"}</Button></div>
-      <button className="md:hidden p-2 rounded-lg focus-ring" aria-label="Open menu" onClick={()=>setOpen(true)}><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="2" rx="1" fill="currentColor" /><rect x="3" y="11" width="18" height="2" rx="1" fill="currentColor" /><rect x="3" y="16" width="18" height="2" rx="1" fill="currentColor" /></svg></button>
+      <div className="hidden md:flex items-center gap-2">{navItems.map(({k,label})=>(<Button key={k} variant="ghost" onClick={()=>onNav(k)}>{label}</Button>))}<Button variant="ghost" onClick={()=>setTheme(theme==="dark"?"light":"dark")}>{theme==="dark"?"Light":"Dark"}</Button></div>
+      <button className="md:hidden p-2 rounded-lg" onClick={()=>setOpen(true)} aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="6" width="18" height="2" rx="1"/><rect x="3" y="11" width="18" height="2" rx="1"/><rect x="3" y="16" width="18" height="2" rx="1"/></svg></button>
     </div>
-    <AnimatePresence>{open && (<motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="md:hidden fixed inset-0 z-50" style={{background:"rgba(0,0,0,.45)"}} onClick={()=>setOpen(false)}><motion.div initial={{y:-20, opacity:0}} animate={{y:0, opacity:1}} exit={{y:-20, opacity:0}} transition={{type:"spring", stiffness:420, damping:34}} className="glass shadow-elev rounded-b-2xl p-3 pb-4" style={{background:"var(--card)"}} onClick={(e)=>e.stopPropagation()}><div className="flex items-center justify-between px-1 py-2"><div className="flex items-center gap-3"><div className="w-7 h-7 rounded-lg" style={{background:"var(--fg)"}}/><span className="font-semibold">FinPath</span></div><button className="p-2 rounded-lg focus-ring" aria-label="Close menu" onClick={()=>setOpen(false)}>✕</button></div><div className="mt-2">{navItems.map(({k,label})=> (<button key={k} onClick={()=>{ onNav(k); setOpen(false); }} className="w-full text-left px-3 py-3 rounded-xl hover:bg-[var(--fg)]/10">{label}</button>))}<div className="px-3 pt-2"><Button variant="outline" onClick={()=>{ setTheme(theme==="dark"?"light":"dark"); setOpen(false); }} className="w-full">{theme==="dark"?"Switch to Light":"Switch to Dark"}</Button></div></div></motion.div></motion.div>)}</AnimatePresence>
+    <AnimatePresence>{open && (<motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="md:hidden fixed inset-0 z-50 bg-black/45" onClick={()=>setOpen(False)}><motion.div initial={{y:-20,opacity:0}} animate={{y:0,opacity:1}} exit={{y:-20,opacity:0}} transition={{type:"spring",stiffness:420,damping:34}} className="rounded-b-2xl p-3 pb-4" style={{background:"var(--card)"}} onClick={(e)=>e.stopPropagation()}>
+      <div className="flex items-center justify-between px-1 py-2"><div className="flex items-center gap-3"><div className="w-7 h-7 rounded-lg" style={{background:"var(--fg)"}}/><span className="font-semibold">FinPath</span></div><button className="p-2 rounded-lg" onClick={()=>setOpen(false)} aria-label="Close">✕</button></div>
+      <div className="mt-2">{navItems.map(({k,label})=>(<button key={k} onClick={()=>{ onNav(k); setOpen(false); }} className="w-full text-left px-3 py-3 rounded-xl hover:bg-[var(--fg)]/10">{label}</button>))}<div className="px-3 pt-2"><Button variant="outline" onClick={()=>{ setTheme(theme==="dark"?"light":"dark"); setOpen(false); }} className="w-full">{theme==="dark"?"Switch to Light":"Switch to Dark"}</Button></div></div>
+    </motion.div></motion.div>)}</AnimatePresence>
   </div>;
 }
 
 function startOfWeek(date = new Date()) { const d = new Date(date); const day = d.getDay(); const diff = (day===0?-6:1)-day; d.setDate(d.getDate()+diff); d.setHours(0,0,0,0); return d; }
 function weekId(date = new Date()){ return startOfWeek(date).toISOString().slice(0,10); }
-function defaultWeekly(){ return { weekId: weekId(), target:5, completed:0, tiers:[{target:3,rewardXp:30,awarded:false},{target:5,rewardXp:50,awarded:false},{target:7,rewardXp:100,awarded:false}], done:false }; }
+function defaultWeekly(){ return { weekId: weekId(), target:5, completed:0, tiers:[{target:3,rewardXp:30,awarded:false},{target:5,rewardXp:50,awarded:false},{target:7,rewardXp:100,awarded:false}] }; }
 function useGame(){
   const [game,setGame]=useState(()=> (load()?.game) || { xp:0, streak:0, lastActive:null, badges:[], weekly: defaultWeekly(), certificates:[] });
   useEffect(()=>{ const today=new Date().toDateString(); const y=new Date(Date.now()-86400000).toDateString(); if(game.lastActive!==today){ const n=game.lastActive===y?(game.streak||0)+1:1; setGame(g=>({ ...g, lastActive:today, streak:n })); } },[]);
@@ -72,19 +150,32 @@ function useGame(){
   useEffect(()=>{ const s=load()||{}; save({...s, game}); },[game]);
   const awardXp = (amt)=> setGame(g=>({ ...g, xp:(g.xp||0)+amt, badges: Array.from(new Set([...(g.badges||[]), "First Steps", (g.streak>=3?"3-Day Streak":null), ((g.xp||0)+amt>=200?"200 XP Club":null)])).filter(Boolean) }));
   const addCertificate = (cert)=> setGame(g=>({ ...g, certificates:[...(g.certificates||[]), cert] }));
-  return { game, awardXp, addCertificate, setGame };
+  return { game, awardXp, addCertificate };
 }
 
 function Home({ onContinue, weekly }){
   const pct = Math.min(100, (weekly.completed/(weekly.target||5))*100);
-  return <div className="max-w-6xl mx-auto px-6 py-12"><Card className="p-8 flex items-center justify-between gap-8"><div className="space-y-3"><h1 className="text-4xl font-extrabold tracking-tight">Welcome back</h1><p className="text-muted">Keep your streak alive. Learn real money skills in minutes a day.</p><div className="flex gap-3"><Button onClick={onContinue}>Continue learning</Button><Button variant="outline" onClick={onContinue}>Browse tracks</Button></div></div><div className="hidden md:block text-center"><div className="relative grid place-items-center"><ProgressRing value={pct} /><div className="absolute text-sm font-semibold">{Math.round(pct)}%</div></div><p className="mt-3 text-xs text-muted">Weekly challenge</p></div></Card></div>;
+  return <div className="max-w-6xl mx-auto px-6 py-12"><Card className="p-8 flex items-center justify-between gap-8"><div className="space-y-3"><h1 className="text-4xl font-extrabold tracking-tight">Welcome back</h1><p className="text-muted">Keep your streak alive. Learn real money skills in minutes a day.</p><div className="flex gap-3"><Button onClick={onContinue}>Continue learning</Button><Button variant="outline" onClick={onContinue}>Browse tracks</Button></div></div><div className="hidden md:block text-center"><div className="relative grid place-items-center"><svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" stroke="rgba(127,127,127,.25)" strokeWidth="10" fill="none"/><circle cx="60" cy="60" r="50" stroke="var(--fg)" strokeWidth="10" strokeLinecap="round" fill="none" strokeDasharray={`${(pct/100)*2*Math.PI*50} ${2*Math.PI*50}`} transform="rotate(-90 60 60)"/></svg><div className="absolute text-sm font-semibold">{Math.round(pct)}%</div></div><p className="mt-3 text-xs text-muted">Weekly challenge</p></div></Card></div>;
 }
 
 function Tracks({ tracks, onOpenLesson }){
-  return <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">{tracks.map(t=>(<Card key={t.id} className="p-6"><div className="flex items-center justify-between mb-4"><h3 className="font-semibold">{t.name}</h3><div className="w-2 h-2 rounded-full" style={{background:"var(--fg)"}} /></div>{t.chapters.map(c=>(<div key={c.id} className="mb-5"><p className="text-xs uppercase tracking-wide text-muted mb-2">{c.title}</p>{(c.lessons||[]).map(l=>(<button key={l.id} onClick={()=>onOpenLesson(t.id,c.id,l.id)} className="w-full text-left py-2 px-3 rounded-xl hover:bg-[var(--fg)]/10 transition">{l.title}</button>))}</div>))}</Card>))}</div>;
+  if(!tracks || tracks.length===0){
+    return <div className="max-w-3xl mx-auto px-6 py-16">
+      <Card className="p-8 text-center">
+        <h2 className="text-xl font-semibold mb-2">No tracks available</h2>
+        <p className="text-muted">If you deployed a fresh build and see this, try a hard refresh (Cmd/Ctrl+Shift+R). We also included a fallback seed so this shouldn’t appear often.</p>
+      </Card>
+    </div>;
+  }
+  return <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+    {tracks.map(t=>(<Card key={t.id} className="p-6">
+      <div className="flex items-center justify-between mb-4"><h3 className="font-semibold">{t.name}</h3><div className="w-2 h-2 rounded-full" style={{background:"var(--fg)"}} /></div>
+      {t.chapters.map(c=>(<div key={c.id} className="mb-5"><p className="text-xs uppercase tracking-wide text-muted mb-2">{c.title}</p>{(c.lessons||[]).map(l=>(<button key={l.id} onClick={()=>onOpenLesson(t.id,c.id,l.id)} className="w-full text-left py-2 px-3 rounded-xl hover:bg-[var(--fg)]/10 transition">{l.title}</button>))}</div>))}
+    </Card>))}
+  </div>;
 }
 
-// Swipe card with full throw off-screen + visual cues
+// Gesture swipe card (full throw)
 function SwipeCard({ text, onSwipeLeft, onSwipeRight, leftLabel="No", rightLabel="Yes" }){
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-160, 0, 160], [-10, 0, 10]);
@@ -99,12 +190,8 @@ function SwipeCard({ text, onSwipeLeft, onSwipeRight, leftLabel="No", rightLabel
   ]);
   const threshold = 120; const power = 800;
   const fling = (dir)=>{
-    const target = (dir>0 ? window.innerWidth : -window.innerWidth) + 200;
-    x.stop();
-    const controls = { from: x.get(), to: target, velocity: dir>0? power: -power, type:"spring", stiffness: 220, damping: 28 };
-    // manual animation via requestAnimationFrame not needed; use Framer Motion's animate
-    // but here, we just set and rely on onDragEnd decision + key change in parent
-    x.set(target);
+    const target = (dir>0 ? window.innerWidth : -window.innerWidth) + 240;
+    x.stop(); x.set(target);
     dir>0 ? onSwipeRight() : onSwipeLeft();
     setTimeout(()=> x.set(0), 0);
   };
@@ -134,7 +221,6 @@ function Questionnaire({ questions, onFinish }){
   </div>;
 }
 
-// Lesson with immediate correctness feedback + next-lesson continuity
 function Lesson({ tracks, tid, cid, lid, onExit, onAward, onNext }){
   const track = tracks.find(t=>t.id===tid);
   const chapter = track?.chapters.find(c=>c.id===cid);
@@ -144,35 +230,23 @@ function Lesson({ tracks, tid, cid, lid, onExit, onAward, onNext }){
   const [complete,setComplete]=useState(false);
   const [showResult,setShowResult]=useState(false);
   const [score,setScore]=useState({ correct:0, total:0 });
-
   useEffect(()=>{ try{ const s=JSON.parse(localStorage.getItem(key)); if(s?.complete) setComplete(true); if(s?.answers) setAnswers(s.answers);}catch{} },[key]);
   const allAnswered = useMemo(()=> (lesson?.quiz||[]).every((_,i)=>answers[i]===0||answers[i]===1), [answers, lesson]);
-
   const choose=(i,idx)=> setAnswers(p=>({...p, [i]: idx }));
-
   const finish=()=>{
     if(!complete && allAnswered){
       const total = (lesson.quiz||[]).length;
-      // Convention: first option is correct by authoring standard
       const correct = (lesson.quiz||[]).reduce((acc,q,i)=> acc + ((answers[i] ?? -1) === 0 ? 1 : 0), 0);
-      setScore({ correct, total });
-      setShowResult(true);
-      try{ localStorage.setItem(key, JSON.stringify({ complete:true, answers })); }catch{}
-      setComplete(true);
-      onAward(lesson.xp||10);
-    } else if(complete){
-      setShowResult(true);
-    }
+      setScore({ correct, total }); setShowResult(true); try{ localStorage.setItem(key, JSON.stringify({ complete:true, answers })); }catch{}; setComplete(true); onAward(lesson.xp||10);
+    } else { setShowResult(true); }
   };
-
   if(!lesson) return <div className="max-w-3xl mx-auto px-6 py-16"><Card className="p-8"><p>Lesson not found.</p><div className="mt-4"><Button onClick={onExit}>Back</Button></div></Card></div>;
-
   return <div className="max-w-3xl mx-auto px-6 py-12">
     <div className="mb-6 flex items-start justify-between"><div><p className="text-xs uppercase tracking-wide text-muted">{track.name} • {chapter.title}</p><h2 className="text-3xl font-extrabold tracking-tight">{lesson.title}</h2></div><Badge>{lesson.xp||10} XP</Badge></div>
     <Card className="p-8"><div className="prose max-w-none">{(lesson.body||[]).map((p,i)=>(<p key={i} className="text-[15px] leading-7">{p}</p>))}</div>{Array.isArray(lesson.learnMore)&&lesson.learnMore.length>0 && (<div className="mt-4 flex flex-wrap gap-3">{lesson.learnMore.map((l,i)=>(<a key={i} href={l.href} target="_blank" rel="noreferrer" className="link text-sm">{l.label}</a>))}</div>)}</Card>
-    <Card className="p-6 mt-6"><h3 className="font-semibold mb-3">Quick Check</h3>{(lesson.quiz||[]).map((q,i)=>(<div key={i} className="mb-4"><p className="mb-2">{q.q || q}</p><div className="grid grid-cols-2 gap-2">{[0,1].map(idx=> (<Button key={idx} onClick={()=>choose(i,idx)} variant={(answers[i]===idx)?"primary":"outline"} aria-pressed={answers[i]===idx}>{(q.labels&&q.labels[idx])|| (idx===0?"Yes":"No")}</Button>))}</div>{answers[i]!==undefined && (<div className="mt-2 text-sm">{answers[i]===0 ? <span className="text-emerald-600">Correct</span> : <span className="text-rose-600">Incorrect — correct answer: {(q.labels&&q.labels[0])||"Option 1"}</span>}</div>)}</div>))}</Card>
+    <Card className="p-6 mt-6"><h3 className="font-semibold mb-3">Quick Check</h3>{(lesson.quiz||[]).map((q,i)=>(<div key={i} className="mb-4"><p className="mb-2">{q.q || q}</p><div className="grid grid-cols-2 gap-2">{[0,1].map(idx=> (<Button key={idx} onClick={()=>choose(i,idx)} variant={(answers[i]===idx)?"primary":"outline"} aria-pressed={answers[i]===idx}>{(q.labels&&q.labels[idx])|| (idx===0?"Yes":"No")}</Button>))}</div>{answers[i]!==undefined && (<div className="mt-2 text-sm">{answers[i]===0 ? <span className="text-emerald-600">Correct</span> : <span className="text-rose-600">Incorrect</span>}</div>)}</div>))}</Card>
     <div className="mt-6 flex items-center gap-3"><Button onClick={finish} disabled={!allAnswered && !complete}>{complete? "View Results" : "Finish Lesson"}</Button><div className="ml-auto"><Button variant="outline" onClick={onExit}>Back to Tracks</Button></div></div>
-    <AnimatePresence>{showResult && (<motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="fixed inset-0 z-50 bg-black/40 grid place-items-center"><Card className="p-6 max-w-md w-[92vw]"><div className="text-center space-y-2"><div className="text-5xl">🎉</div><h3 className="text-xl font-semibold">Nice work!</h3><p className="text-muted">{score.correct} / {score.total} correct. {(score.correct/Math.max(1,score.total))*100|0}%</p><div className="flex gap-2 justify-center pt-2"><Button onClick={()=>{ setShowResult(false); onNext(); }}>Next lesson</Button><Button variant="outline" onClick={()=>{ setShowResult(false); onExit(); }}>Back to tracks</Button></div></div></Card></motion.div>)}</AnimatePresence>
+    <AnimatePresence>{showResult && (<motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="fixed inset-0 z-50 bg-black/40 grid place-items-center"><Card className="p-6 max-w-md w-[92vw]"><div className="text-center space-y-2"><div className="text-5xl">🎉</div><h3 className="text-xl font-semibold">Nice work!</h3><p className="text-muted">{score.correct} / {score.total} correct. {Math.round((score.correct/Math.max(1,score.total))*100)}%</p><div className="flex gap-2 justify-center pt-2"><Button onClick={()=>{ setShowResult(false); const evt=new CustomEvent('advance'); window.dispatchEvent(evt); onNext && onNext(); }}>Continue</Button><Button variant="outline" onClick={()=>{ setShowResult(false); }}>Stay here</Button></div></div></Card></motion.div>)}</AnimatePresence>
   </div>;
 }
 
@@ -187,11 +261,8 @@ function findNextLesson(tracks, tid, cid, lid){
   const tr = tracks[ti];
   const ci = tr.chapters.findIndex(c=>c.id===cid); if(ci<0) return null;
   const li = tr.chapters[ci].lessons.findIndex(l=>l.id===lid); if(li<0) return null;
-  // Next in same chapter
   if(li+1 < tr.chapters[ci].lessons.length) return { tid, cid, lid: tr.chapters[ci].lessons[li+1].id };
-  // Next chapter first lesson
   if(ci+1 < tr.chapters.length) return { tid, cid: tr.chapters[ci+1].id, lid: tr.chapters[ci+1].lessons[0].id };
-  // Next track
   if(ti+1 < tracks.length) return { tid: tracks[ti+1].id, cid: tracks[ti+1].chapters[0].id, lid: tracks[ti+1].chapters[0].lessons[0].id };
   return null;
 }
@@ -199,10 +270,12 @@ function findNextLesson(tracks, tid, cid, lid){
 export default function App(){
   const [route,setRoute]=useState("home");
   const [lessonRef,setLessonRef]=useState(null);
-  const [tracks,setTracks]=useState(()=> DATA);
+  const [tracks,setTracks]=useState(()=> seedTracks());
   const { theme, setTheme } = useTheme();
   const { game, awardXp } = useGame();
+
   useEffect(()=>{ const s=load(); if(!s?.quiz) setRoute("quiz"); },[]);
+
   return <div className="min-h-screen">
     <Header onNav={(r)=>setRoute(r)} theme={theme} setTheme={setTheme} />
     {route==="quiz" && <Questionnaire questions={QUESTIONS} onFinish={()=>setRoute("home")} />}
