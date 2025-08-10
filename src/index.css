@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 *{ font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans; letter-spacing:-0.01em; }
 html, body, #root{ height:100% }
 .text-muted{ color: theme('colors.mute') }
@@ -17,7 +16,7 @@ html, body, #root{ height:100% }
 a.link{ color:#111; border-bottom:1px solid rgba(0,0,0,.15); text-decoration:none }
 a.link:hover{ opacity:.85 }
 .neon{ background: theme('colors.neon') }
-.kbd{ border-radius:.6rem; background:#111; color:#fff; padding:.1rem .4rem; font-size:.7rem }
-.pulse{ animation: pulse 0.9s ease }
-@keyframes pulse{ 0%{ transform:scale(1)} 50%{ transform:scale(1.02)} 100%{ transform:scale(1)} }
 .locked{ opacity:.45; pointer-events:none }
+@keyframes pulse{ 0%{ transform:scale(1)} 50%{ transform:scale(1.02)} 100%{ transform:scale(1)} }
+.pulse{ animation: pulse .9s ease }
+@media (prefers-reduced-motion: reduce) { .pulse{ animation:none } }
