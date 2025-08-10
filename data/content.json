@@ -1,0 +1,1015 @@
+{
+  "tracks": [
+    {
+      "id": "budgeting-saving-basics",
+      "title": "Budgeting & Saving Basics",
+      "description": "Master day\u2011to\u2011day money skills: build a practical budget, automate saving, and create buffers for real life.",
+      "lessons": [
+        {
+          "title": "Your First Budget \u2013 Building a Strong Foundation",
+          "hook": "Your budget isn\u2019t just a spreadsheet \u2014 it\u2019s your personal roadmap to financial control.",
+          "what": "A budget is a plan for allocating income across needs, wants, and future you (savings/investing). It replaces guesswork with clarity.",
+          "why": "Without a plan, money leaks into low\u2011value spending. A budget makes trade\u2011offs explicit, reduces stress, and accelerates goals.",
+          "how": [
+            "List net monthly income and fixed costs (rent/mortgage, utilities, phone, transit, insurance).",
+            "Choose a simple rule to start (e.g., 50/30/20) then adjust to your reality.",
+            "Set a minimum monthly savings target and automate it on payday.",
+            "Track variable spend weekly; course\u2011correct at your mid\u2011month review.",
+            "Schedule a 20\u2011minute month\u2011end retro to adjust next month\u2019s plan."
+          ],
+          "example": "Sofia in Toronto nets $4,000/mo. Fixed: $2,300. Automation: $600 to savings on payday. She plans $700 for flexible spend and reviews each Sunday.",
+          "takeaways": [
+            "Budgets are about priorities, not perfection.",
+            "Automation beats willpower.",
+            "Small, consistent savings compound into options."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the primary purpose of a budget?",
+              "choices": [
+                "Allocate income deliberately toward needs, wants, and future goals",
+                "Avoid paying taxes",
+                "Increase your credit limit automatically",
+                "Eliminate all spending"
+              ],
+              "answer": 0,
+              "explain": "A budget directs each dollar on purpose."
+            }
+          ]
+        },
+        {
+          "title": "Cash\u2011Flow Mapping \u2013 Seeing the Whole Picture",
+          "hook": "When money feels chaotic, the problem is visibility, not character.",
+          "what": "Cash\u2011flow mapping shows what comes in, when it arrives, and where it goes over time.",
+          "why": "Timing mismatches cause overdrafts and anxiety even when annual math looks fine.",
+          "how": [
+            "List pay dates, benefit dates, and bill due dates on one calendar.",
+            "Group bills by payday; shift due dates where possible.",
+            "Create two \u2018guard rails\u2019: a bill\u2011pay account and a spend account.",
+            "Move money on payday: bills + savings first, spending last.",
+            "Keep a one\u2011month \u2018cash buffer\u2019 target to smooth timing shocks."
+          ],
+          "example": "Jordan gets paid bi\u2011weekly. He moves $1,200 to Bills and $300 to Savings each payday. Groceries, gas, and fun come from Spend. Overdrafts vanish.",
+          "takeaways": [
+            "The order of operations matters.",
+            "Separate accounts simplify behavior.",
+            "Buffers tame timing problems."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Why do separate bill\u2011pay and spending accounts help?",
+              "choices": [
+                "They make it harder to accidentally spend bill money",
+                "They increase bank fees automatically",
+                "They improve your credit score instantly",
+                "They eliminate the need to budget"
+              ],
+              "answer": 0,
+              "explain": "Separation protects essentials from impulse spending."
+            }
+          ]
+        },
+        {
+          "title": "The 50/30/20 (and Friends) \u2013 Picking a Starter Rule",
+          "hook": "Rules of thumb aren\u2019t laws \u2014 they\u2019re training wheels you can tune.",
+          "what": "50/30/20 splits net income into 50% needs, 30% wants, 20% saving/investing. Other patterns: 60/20/20; 70/20/10 while paying debt.",
+          "why": "A simple default reduces decision fatigue and gives you a starting benchmark.",
+          "how": [
+            "Estimate your current split across needs/wants/saving.",
+            "Pick a starter ratio for 90 days; don\u2019t chase perfection.",
+            "Adjust high\u2011cost categories (housing, car) slowly; trim wants weekly.",
+            "Increase savings by 1\u20132% every quarter (\u2018pay yourself more\u2019).",
+            "Re\u2011baseline after big life events (move, new job, child)."
+          ],
+          "example": "Ava starts near 65/25/10. She trims subscriptions and renegotiates internet. After 3 months she\u2019s at 55/25/20 without feeling deprived.",
+          "takeaways": [
+            "Start simple; iterate.",
+            "Small % changes compound fast.",
+            "Big rocks (housing, car) drive outcomes."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the main benefit of a rule\u2011of\u2011thumb like 50/30/20?",
+              "choices": [
+                "It provides a simple, workable default you can adjust",
+                "It guarantees wealth in a year",
+                "It removes the need to track spending",
+                "It\u2019s required by banks"
+              ],
+              "answer": 0,
+              "explain": "Defaults reduce friction and help you start."
+            }
+          ]
+        },
+        {
+          "title": "Expense Triage \u2013 Cutting Without Feeling Deprived",
+          "hook": "Cutting everything fails. Cutting the right things works.",
+          "what": "Expense triage prioritizes high\u2011cost/low\u2011joy items first and preserves high\u2011joy/low\u2011cost items.",
+          "why": "You keep motivation when cuts don\u2019t feel like punishment.",
+          "how": [
+            "Make a Joy vs. Cost matrix for the last 90 days of spending.",
+            "Cancel or downgrade high\u2011cost/low\u2011joy items first.",
+            "Negotiate recurring bills (phone, internet, insurance).",
+            "Batch \u2018fun\u2019 spending into planned sessions you can look forward to.",
+            "Re\u2011route savings from cuts into your automation immediately."
+          ],
+          "example": "Chris cut two unused subscriptions ($46/mo) and switched to a cheaper phone plan ($25 saved). He kept weekly coffee with a friend. Net save: $71/mo.",
+          "takeaways": [
+            "Target waste, not happiness.",
+            "Negotiation beats deprivation.",
+            "Automate the savings you free up."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which expense should you target first?",
+              "choices": [
+                "High\u2011cost items that bring little value",
+                "Your favorite low\u2011cost treat",
+                "Groceries as a category",
+                "All spending equally"
+              ],
+              "answer": 0,
+              "explain": "Cutting low\u2011joy, high\u2011cost items saves the most with least pain."
+            }
+          ]
+        },
+        {
+          "title": "Emergency Funds \u2013 Building Your Personal Shock Absorber",
+          "hook": "An emergency fund turns a crisis into an inconvenience.",
+          "what": "A cash reserve for true emergencies: job loss, medical, urgent repairs. Separate from investing.",
+          "why": "It prevents high\u2011interest debt and buys decision time when life hits.",
+          "how": [
+            "Set stages: Starter ($1,000), Stable (1\u20133 months), Secure (3\u20136+ months).",
+            "Automate contributions into a separate high\u2011interest savings account.",
+            "Define \u2018emergency\u2019 in writing to avoid misuse.",
+            "Rebuild immediately after you use it.",
+            "Keep it easy to access but not too easy to spend."
+          ],
+          "example": "Priya saved a $1,000 starter fund in 4 months. A flat tire cost $320 \u2014 paid from the fund, no credit card debt, then rebuilt in two pay cycles.",
+          "takeaways": [
+            "Cash beats chaos.",
+            "Stages make big goals achievable.",
+            "Rules protect the purpose."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the best first target for a new emergency fund?",
+              "choices": [
+                "$1,000 starter buffer (or similar small milestone)",
+                "Six months of expenses immediately",
+                "Invest it all for higher returns",
+                "No cash \u2014 rely on credit"
+              ],
+              "answer": 0,
+              "explain": "A small, fast win builds momentum toward larger reserves."
+            }
+          ]
+        },
+        {
+          "title": "Automation \u2013 Let Systems Do the Heavy Lifting",
+          "hook": "If it has to rely on willpower, it probably won\u2019t last.",
+          "what": "Automation moves money on a schedule: savings, bill\u2011pay, and debt payments happen without you.",
+          "why": "It removes decision fatigue and makes the \u2018right\u2019 thing the default.",
+          "how": [
+            "Set savings transfers for payday (before spending begins).",
+            "Enable automatic bill payments with reminders for visibility.",
+            "Use round\u2011ups or rules to sweep spare change to savings.",
+            "Auto\u2011increase savings 1% every quarter (\u2018raise for future you\u2019).",
+            "Review automations quarterly for drift."
+          ],
+          "example": "Diego set $250/pay to savings and auto\u2011paid utilities. Within 6 months he had $3,000 saved without feeling restricted day\u2011to\u2011day.",
+          "takeaways": [
+            "Default to action.",
+            "Automate first, then fine\u2011tune.",
+            "Quarterly reviews keep systems sharp."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Why schedule savings for payday?",
+              "choices": [
+                "You save before lifestyle spending ramps up",
+                "Banks require it",
+                "It reduces your income taxes directly",
+                "It improves credit utilization"
+              ],
+              "answer": 0,
+              "explain": "Pay yourself first is easier when it\u2019s automatic."
+            }
+          ]
+        },
+        {
+          "title": "Sinking Funds \u2013 Plan for the Predictable \u2018Surprises\u2019",
+          "hook": "Christmas isn\u2019t an emergency. Neither is car maintenance.",
+          "what": "Sinking funds are mini\u2011buckets for non\u2011monthly costs you know are coming.",
+          "why": "They prevent recurring \u2018surprise\u2019 expenses from wrecking your month.",
+          "how": [
+            "List irregular expenses (car, travel, gifts, school, annual fees).",
+            "Divide each annual cost by 12 and save monthly into labeled buckets.",
+            "Use a single savings account with sub\u2011labels or multiple accounts.",
+            "Spend only from the matching bucket.",
+            "Review categories annually and rebalance."
+          ],
+          "example": "Nia budgets $900/yr for car maintenance \u2192 $75/mo into \u2018Car\u2019 fund. When brakes cost $420, the money is ready \u2014 no panic.",
+          "takeaways": [
+            "Irregular \u2260 unpredictable.",
+            "Labels reduce temptation to repurpose.",
+            "Monthly micro\u2011saving beats last\u2011minute scrambling."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the key benefit of sinking funds?",
+              "choices": [
+                "They spread predictable non\u2011monthly costs over the year",
+                "They earn high investment returns",
+                "They eliminate the need for insurance",
+                "They raise your credit score immediately"
+              ],
+              "answer": 0,
+              "explain": "Smoothing large costs prevents budget shocks."
+            }
+          ]
+        },
+        {
+          "title": "Groceries, Dining, and the \u2018Flex\u2019 Categories",
+          "hook": "The easiest overspending happens where tracking is fuzzier.",
+          "what": "Flex categories vary weekly (groceries, dining, rideshare). Guardrails prevent drift.",
+          "why": "Simple constraints beat perfect tracking in high\u2011variance categories.",
+          "how": [
+            "Set a weekly grocery envelope and shop with a list.",
+            "Batch cook once per week; pre\u2011portion snacks to cut impulse buys.",
+            "Plan dining out intentionally (e.g., one nice meal per week).",
+            "Use a separate card/wallet for flex spend to increase awareness.",
+            "If you overshoot one week, undershoot the next."
+          ],
+          "example": "Malik set $120/wk for groceries and $40 for dining. A separate debit card helped him notice patterns and stay on target by week 3.",
+          "takeaways": [
+            "Weekly guardrails > vague monthly hopes.",
+            "Fewer decisions at the store = lower spend.",
+            "Awareness beats after\u2011the\u2011fact guilt."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which tactic best controls \u2018flex\u2019 overspending?",
+              "choices": [
+                "Weekly limits with a separate card or wallet",
+                "Checking the bank balance once a month",
+                "Avoiding grocery lists to stay flexible",
+                "Hoping it averages out"
+              ],
+              "answer": 0,
+              "explain": "Weekly constraints keep variable costs in check."
+            }
+          ]
+        },
+        {
+          "title": "Big Rocks \u2013 Housing, Transportation, and Insurance",
+          "hook": "Tiny cuts can\u2019t fix an oversized anchor expense.",
+          "what": "\u2018Big rocks\u2019 are large, recurring costs that dominate budgets. Optimizing them creates outsized savings.",
+          "why": "Shaving 10\u201320% off a major category frees more than canceling every latte.",
+          "how": [
+            "Benchmark housing and car total % of take\u2011home pay.",
+            "Consider housemates, downsizing, or refinancing when numbers are tight.",
+            "Use TCO (total cost of ownership) for cars, not just payments.",
+            "Shop insurance annually; increase deductibles if appropriate.",
+            "Apply half of any savings to goals immediately to lock them in."
+          ],
+          "example": "Leah switched to transit + car\u2011share, cutting monthly transport from $620 to $280. She rerouted $170/mo into savings and $170/mo to debt prepayments.",
+          "takeaways": [
+            "Focus energy where dollars are biggest.",
+            "Ownership costs > sticker prices.",
+            "Lock in savings or lifestyle creep eats them."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Why prioritize \u2018big rocks\u2019 optimizations?",
+              "choices": [
+                "They create large, durable savings",
+                "They\u2019re faster than calling providers",
+                "They\u2019re more fun than budgeting",
+                "They raise credit limits automatically"
+              ],
+              "answer": 0,
+              "explain": "Big recurring costs drive long\u2011term outcomes."
+            }
+          ]
+        },
+        {
+          "title": "Monthly Retros \u2013 Iterate Like a Product Team",
+          "hook": "Your budget isn\u2019t a contract; it\u2019s a draft that learns.",
+          "what": "A monthly retro reviews what worked, what didn\u2019t, and what to try next.",
+          "why": "Iteration beats perfection \u2014 small tweaks monthly lead to compounding improvements.",
+          "how": [
+            "Schedule a 20\u2011minute calendar block at month\u2011end.",
+            "Check category drift and note one root cause.",
+            "Decide one experiment to try next month.",
+            "Increase automation if the experiment works.",
+            "Write a one\u2011line \u2018money rule\u2019 for the month and pin it."
+          ],
+          "example": "After noticing weekend overspending, Theo planned Sunday meal prep and moved dining money to a pre\u2011paid card. Next month came in on target.",
+          "takeaways": [
+            "Inspect \u2192 adapt \u2192 improve.",
+            "One change at a time beats overhaul.",
+            "Write rules; make them visible."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the purpose of a monthly retro?",
+              "choices": [
+                "Continuously adjust your plan based on real data",
+                "Punish yourself for mistakes",
+                "Forecast investment returns",
+                "Replace automation with manual steps"
+              ],
+              "answer": 0,
+              "explain": "Regular feedback loops make the system smarter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "credit-debt-mastery",
+      "title": "Credit & Debt Mastery",
+      "description": "Understand credit, protect your score, and create a realistic plan to eliminate high\u2011interest debt.",
+      "lessons": [
+        {
+          "title": "Credit Scores Demystified",
+          "hook": "Your credit score is a trust signal \u2014 not your worth.",
+          "what": "A credit score summarizes how reliably you\u2019ve handled credit. Key factors: payment history, utilization, age of accounts, mix, inquiries.",
+          "why": "Knowing the levers lets you protect your access to low\u2011cost borrowing when you truly need it.",
+          "how": [
+            "Pay on time \u2014 set autopay for at least minimums.",
+            "Keep utilization under ~30% (under 10% is excellent).",
+            "Avoid closing your oldest card (it affects age).",
+            "Limit hard inquiries; batch applications.",
+            "Check reports annually and dispute errors."
+          ],
+          "example": "Rae keeps card balances under 10% and autopays minimums. A missed bill never tanks her score again.",
+          "takeaways": [
+            "On\u2011time payments matter most.",
+            "Low utilization protects your score.",
+            "Old accounts help your average age."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which factor most heavily influences your credit score?",
+              "choices": [
+                "On\u2011time payment history",
+                "The color of your card",
+                "Amount of cash in checking",
+                "Your income tax bracket"
+              ],
+              "answer": 0,
+              "explain": "Payment history is the largest component."
+            }
+          ]
+        },
+        {
+          "title": "Good Debt vs. Bad Debt",
+          "hook": "Not all debt is equal \u2014 cost and purpose matter.",
+          "what": "\u2018Good\u2019 debt funds assets that appreciate or improve earning power (e.g., education, reasonable mortgage). \u2018Bad\u2019 debt is high\u2011interest consumer debt.",
+          "why": "Clarity prevents shame spirals and focuses your payoff strategy where it counts.",
+          "how": [
+            "List all debts with balances, rates, and purpose.",
+            "Label by cost and usefulness (asset\u2011building vs. consumption).",
+            "Prioritize high\u2011interest consumer debt for accelerated payoff.",
+            "Keep low\u2011rate, productive debt manageable and on autopay.",
+            "Avoid new consumer debt while paying down."
+          ],
+          "example": "Mina has a 2.2% car loan and 22% credit card debt. She keeps the car loan on autopay and aggressively attacks the card balance.",
+          "takeaways": [
+            "Cost and purpose determine priority.",
+            "High interest = urgent action.",
+            "Autopay the rest to avoid backsliding."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which debt should typically be paid off first?",
+              "choices": [
+                "High\u2011interest consumer debt",
+                "Low\u2011rate student loan",
+                "Mortgage at 2%",
+                "0% promotional plan with 2 months left"
+              ],
+              "answer": 0,
+              "explain": "Interest rate is the biggest drag."
+            }
+          ]
+        },
+        {
+          "title": "Debt Inventory \u2013 Know the Enemy",
+          "hook": "You can\u2019t beat what you don\u2019t measure.",
+          "what": "A full inventory lists every debt: balance, APR, minimum, due date, lender, and status.",
+          "why": "Seeing the total picture reveals quick wins and risk hotspots.",
+          "how": [
+            "Create a single list or spreadsheet of all debts.",
+            "Sort by APR descending to see most expensive first.",
+            "Note any fees, penalties, or promotional periods.",
+            "Call lenders to confirm details and options.",
+            "Set autopay for minimums immediately."
+          ],
+          "example": "After building an inventory, Omar found a 27% store card he\u2019d forgotten. Closing that loop saved him $40/mo in interest.",
+          "takeaways": [
+            "Visibility drives action.",
+            "Minimum autopay prevents new dings.",
+            "APR sort shows where dollars matter."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the first step in creating a payoff plan?",
+              "choices": [
+                "List every debt with balance and APR",
+                "Apply for a new card",
+                "Pay off the smallest balance randomly",
+                "Ignore statements to reduce stress"
+              ],
+              "answer": 0,
+              "explain": "Inventory creates the map for the plan."
+            }
+          ]
+        },
+        {
+          "title": "Avalanche vs. Snowball \u2013 Picking Your Payoff Strategy",
+          "hook": "The best plan is the one you\u2019ll stick to.",
+          "what": "Avalanche = highest APR first (mathematically optimal). Snowball = smallest balance first (motivational wins).",
+          "why": "Matching strategy to your psychology increases the odds you finish.",
+          "how": [
+            "Calculate your monthly \u2018extra\u2019 payoff amount.",
+            "Choose avalanche for lowest total interest; snowball for momentum.",
+            "Automate extra payments to the target account.",
+            "Roll freed\u2011up minimums into the next debt (\u2018debt snowballing\u2019).",
+            "Celebrate milestones to keep energy high."
+          ],
+          "example": "Kayla chose snowball to see quick wins. Three small balances disappeared in 5 months, building momentum for bigger ones.",
+          "takeaways": [
+            "Either method works if you persist.",
+            "Automation + roll\u2011over accelerates progress.",
+            "Motivation is a feature, not a flaw."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which method minimizes interest paid over time?",
+              "choices": [
+                "Avalanche (highest APR first)",
+                "Snowball (smallest balance first)",
+                "Random order",
+                "Highest minimum payment first"
+              ],
+              "answer": 0,
+              "explain": "Targeting APR saves the most interest."
+            }
+          ]
+        },
+        {
+          "title": "Negotiating with Lenders",
+          "hook": "You\u2019re not stuck with the status quo \u2014 ask.",
+          "what": "Lenders may reduce rates, waive fees, or set hardship plans if you call early and propose a concrete plan.",
+          "why": "A lower APR or fee relief can meaningfully speed up payoff.",
+          "how": [
+            "Prepare: income, expenses, and a proposed payment you can keep.",
+            "Ask for rate reductions, fee waivers, and due\u2011date changes.",
+            "Request hardship programs if needed \u2014 temporary but helpful.",
+            "Get everything in writing and calendar a follow\u2011up check.",
+            "If denied, set a reminder and try again in 90 days."
+          ],
+          "example": "After a calm call, Jin cut one card\u2019s APR from 23.9% to 17.9%, saving ~$30/mo, which he rerouted to principal.",
+          "takeaways": [
+            "Early, proactive outreach works best.",
+            "Specific asks beat vague requests.",
+            "Documentation prevents surprises."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which request most directly speeds up payoff?",
+              "choices": [
+                "A lower interest rate (APR)",
+                "A new card color",
+                "Paper statements only",
+                "Shorter grace period"
+              ],
+              "answer": 0,
+              "explain": "Lower APR means more of each payment hits principal."
+            }
+          ]
+        },
+        {
+          "title": "Balance Transfers & Consolidation \u2013 Use with Caution",
+          "hook": "0% isn\u2019t free if it causes backsliding.",
+          "what": "Balance transfers or consolidation loans can lower interest temporarily, but risks include fees and re\u2011accumulating debt.",
+          "why": "Tools are helpful only with behavior change and a firm payoff plan.",
+          "how": [
+            "Compare fees vs. savings; calculate your breakeven.",
+            "Pay within the promo period; set autopay to finish a month early.",
+            "Do not spend on the old card after transferring.",
+            "Avoid extending terms that keep you in debt longer.",
+            "Pair with a strict budget and spending freeze."
+          ],
+          "example": "Sam transferred $4,000 to 0% for 12 months with a 3% fee. He set $350/mo autopay to finish in 12 months and cut the old card.",
+          "takeaways": [
+            "Math + behavior change = success.",
+            "Fees matter; run the numbers.",
+            "Close loops to avoid relapse."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s a common pitfall after a balance transfer?",
+              "choices": [
+                "Spending again on the original card",
+                "Paying off the balance on time",
+                "Setting autopay",
+                "Tracking progress monthly"
+              ],
+              "answer": 0,
+              "explain": "Old habits can recreate the same balance."
+            }
+          ]
+        },
+        {
+          "title": "Protecting Your Credit While Paying Off Debt",
+          "hook": "You can reduce debt without wrecking your score.",
+          "what": "On\u2011time minimums, low utilization, and stable accounts maintain your profile during payoff.",
+          "why": "Protecting your access to fair rates saves money later.",
+          "how": [
+            "Autopay minimums to protect payment history.",
+            "Keep utilization low; consider an extra mid\u2011cycle payment.",
+            "Avoid closing old accounts during payoff.",
+            "Space out applications until after debt is reduced.",
+            "Monitor reports for errors quarterly."
+          ],
+          "example": "Arun paid a mid\u2011cycle $200 to drop utilization before a mortgage application. It nudged his score higher at the right time.",
+          "takeaways": [
+            "Payment history and utilization are key.",
+            "Avoid avoidable dings while in payoff mode.",
+            "Timing matters before applications."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which action best preserves your score during payoff?",
+              "choices": [
+                "Paying at least the minimum on time, every time",
+                "Closing your oldest card",
+                "Maxing cards but paying the minimum",
+                "Opening multiple new accounts"
+              ],
+              "answer": 0,
+              "explain": "On\u2011time payments anchor your score."
+            }
+          ]
+        },
+        {
+          "title": "Debt Freedom Plan \u2013 Your Written Strategy",
+          "hook": "A plan you can see beats a plan in your head.",
+          "what": "A one\u2011page plan defines your method, monthly extra, target order, milestones, and safeguards.",
+          "why": "Clear rules prevent emotion\u2011based backtracking.",
+          "how": [
+            "Write your method (avalanche or snowball) and why.",
+            "Fix your monthly extra amount and due date.",
+            "List the order of debts and expected payoff dates.",
+            "Define relapse guards (spending freeze rules, automation).",
+            "Schedule monthly check\u2011ins and milestone rewards."
+          ],
+          "example": "Nora printed her plan and taped it inside a cabinet. Checking off balances became a ritual that kept her going.",
+          "takeaways": [
+            "Visibility motivates.",
+            "Rules reduce decision fatigue.",
+            "Milestones create momentum."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which element keeps your plan realistic during tough months?",
+              "choices": [
+                "A fixed, affordable \u2018extra\u2019 payment you can sustain",
+                "Changing strategies weekly",
+                "Ignoring your budget",
+                "Opening new credit for rewards"
+              ],
+              "answer": 0,
+              "explain": "Sustainability beats ambition alone."
+            }
+          ]
+        },
+        {
+          "title": "Emergency Protocols \u2013 When Life Happens During Payoff",
+          "hook": "Progress isn\u2019t linear \u2014 plan for bumps.",
+          "what": "A protocol defines what to do if income drops or costs spike so you avoid high\u2011interest debt.",
+          "why": "Pre\u2011made decisions keep you calm under stress.",
+          "how": [
+            "List the order to cut discretionary categories.",
+            "Pause extra payoff temporarily, not minimums.",
+            "Activate side income or sell unused items.",
+            "Call lenders early to request hardship options.",
+            "Rebuild your buffer first, then resume payoff."
+          ],
+          "example": "After a car repair, Eli paused extra payments for one month, used his buffer, then resumed. The plan survived intact.",
+          "takeaways": [
+            "Protect on\u2011time payments first.",
+            "Temporary pauses beat quitting.",
+            "Buffers are built for this."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "In a temporary setback, what should you pause first?",
+              "choices": [
+                "Extra debt payments (not the minimums)",
+                "Minimum payments",
+                "Utility bills",
+                "Insurance"
+              ],
+              "answer": 0,
+              "explain": "Guard your payment history; pause extras, not essentials."
+            }
+          ]
+        },
+        {
+          "title": "Life After Debt \u2013 Staying Out",
+          "hook": "Getting out is step one. Staying out is the mission.",
+          "what": "Post\u2011debt habits (automation, sinking funds, intentional spending) prevent relapse.",
+          "why": "Use freed\u2011up cash for wealth building instead of lifestyle creep.",
+          "how": [
+            "Keep your payoff autopay slot and redirect it to savings/investing.",
+            "Maintain sinking funds for irregular costs.",
+            "Do a quarterly subscription/bill audit.",
+            "Use a cooling\u2011off rule for new big purchases (e.g., 48 hours).",
+            "Write a post\u2011debt vision: what you\u2019re saying yes to now."
+          ],
+          "example": "When Maya finished paying $400/mo on debt, she redirected it to an investment account. A year later she had nearly $5,000 invested.",
+          "takeaways": [
+            "Behavior change locks in the win.",
+            "Guardrails prevent re\u2011accumulation.",
+            "Invest the payment you no longer need."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the smartest use of your old monthly debt payment after becoming debt\u2011free?",
+              "choices": [
+                "Automatically invest or save the same amount",
+                "Increase dining out immediately",
+                "Apply for new store cards",
+                "Close all accounts"
+              ],
+              "answer": 0,
+              "explain": "Redirecting payments builds wealth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investing-fundamentals",
+      "title": "Investing Fundamentals",
+      "description": "Learn how markets work, choose simple portfolios, and invest consistently for the long term.",
+      "lessons": [
+        {
+          "title": "Why Invest? The Cost of Waiting",
+          "hook": "Time in the market beats timing the market.",
+          "what": "Investing puts money to work to outpace inflation and grow via compounding.",
+          "why": "Delaying even a few years noticeably shrinks long\u2011term outcomes.",
+          "how": [
+            "Set a purpose: retirement, home, education, freedom.",
+            "Decide a starter monthly amount you can stick with.",
+            "Automate contributions to a diversified fund.",
+            "Keep a separate emergency fund (don\u2019t invest that money).",
+            "Commit to a 10\u2011year horizon for long\u2011term goals."
+          ],
+          "example": "If Alex invests $300/mo starting at 25 with 6% returns, by 45 they may have ~\\$139k vs. ~\\$83k starting at 30 (illustrative).",
+          "takeaways": [
+            "Compounding needs time.",
+            "Automation makes consistency easy.",
+            "Separate safety cash from investments."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the biggest advantage of starting early?",
+              "choices": [
+                "More time for compounding to work",
+                "Guaranteed higher returns",
+                "Lower risk automatically",
+                "No need for an emergency fund"
+              ],
+              "answer": 0,
+              "explain": "Time multiplies results."
+            }
+          ]
+        },
+        {
+          "title": "Risk & Reward \u2013 Volatility Explained",
+          "hook": "Short\u2011term dips are the price of long\u2011term growth.",
+          "what": "Higher expected returns usually come with higher volatility (price swings).",
+          "why": "Understanding risk prevents panic selling at the worst times.",
+          "how": [
+            "Match risk to your time horizon and temperament.",
+            "Expect temporary drops; plan for them.",
+            "Diversify so no single asset dominates results.",
+            "Use broad index funds to capture the market.",
+            "Check accounts quarterly, not daily."
+          ],
+          "example": "Jamie saw a 15% drop one year but stayed invested. The following year recovered, and the plan stayed on track.",
+          "takeaways": [
+            "Volatility \u2260 loss unless you sell.",
+            "Diversification smooths the ride.",
+            "Behavior beats forecasting."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What helps you avoid panic during market drops?",
+              "choices": [
+                "A long\u2011term plan and diversification",
+                "Checking prices hourly",
+                "Selling at the first dip",
+                "Putting all money in one stock"
+              ],
+              "answer": 0,
+              "explain": "Preparation reduces fear."
+            }
+          ]
+        },
+        {
+          "title": "Accounts 101 \u2013 Tax\u2011Advantaged First",
+          "hook": "The account wrapper can boost your outcome without changing your investments.",
+          "what": "Tax\u2011advantaged accounts (like RRSP/TFSA equivalents) shelter growth or contributions depending on the rules.",
+          "why": "Choosing the right account order can add years of progress with the same savings.",
+          "how": [
+            "List your available account types and limits.",
+            "Use tax\u2011advantaged accounts before taxable (if eligible).",
+            "Keep emergency cash outside investment accounts.",
+            "Avoid frequent withdrawals that reset room or cause penalties.",
+            "Document your order of contributions each year."
+          ],
+          "example": "Taylor contributes monthly to a tax\u2011advantaged account first, then a taxable account once room is used. Same savings, better after\u2011tax outcome.",
+          "takeaways": [
+            "Tax treatment matters.",
+            "Follow contribution rules.",
+            "Keep liquidity for emergencies."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Why use tax\u2011advantaged accounts when eligible?",
+              "choices": [
+                "They can improve your after\u2011tax returns",
+                "They guarantee 10% returns",
+                "They eliminate market risk",
+                "They increase credit scores"
+              ],
+              "answer": 0,
+              "explain": "Sheltering growth or income improves outcomes."
+            }
+          ]
+        },
+        {
+          "title": "Asset Allocation \u2013 The Big Decision",
+          "hook": "Your mix of stocks and bonds drives most of your experience.",
+          "what": "Allocation sets expected risk/return. More stocks = higher growth and swings; more bonds = stability but lower returns.",
+          "why": "Picking a sensible mix and staying the course beats chasing performance.",
+          "how": [
+            "Choose a diversified stock/bond mix (e.g., 80/20, 60/40) based on horizon.",
+            "Use low\u2011cost index funds or a single balanced/\u2018all\u2011in\u2011one\u2019 ETF.",
+            "Write a simple policy: your target mix and when to rebalance.",
+            "Avoid tinkering based on headlines.",
+            "Revisit allocation as life stage changes."
+          ],
+          "example": "A 60/40 investor slept better during downturns and still reached goals on schedule.",
+          "takeaways": [
+            "Allocation > selection.",
+            "Low cost and diversification are core.",
+            "Document your policy to reduce impulse moves."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What primarily determines your portfolio\u2019s behavior?",
+              "choices": [
+                "Your asset allocation (mix of assets)",
+                "The broker\u2019s color scheme",
+                "How often you check your phone",
+                "Owning a single hot stock"
+              ],
+              "answer": 0,
+              "explain": "Allocation explains most outcomes over time."
+            }
+          ]
+        },
+        {
+          "title": "Fees \u2013 Small Percentages, Big Impact",
+          "hook": "You don\u2019t control markets, but you do control costs.",
+          "what": "Higher fees compound against you; low\u2011cost funds keep more of your returns.",
+          "why": "A 1% fee gap over decades can mean tens of thousands lost.",
+          "how": [
+            "Know your MER/expense ratios and trading costs.",
+            "Prefer broad, low\u2011cost index funds.",
+            "Avoid unnecessary turnover and taxes.",
+            "Ask providers for lower\u2011cost options when available.",
+            "Review fees annually as part of your retrofit."
+          ],
+          "example": "Switching from 1.2% to 0.2% fees on a $50k portfolio saves ~$500/yr at the start \u2014 savings compound as the portfolio grows.",
+          "takeaways": [
+            "Costs compound like returns (in reverse).",
+            "Indexing is usually cheaper.",
+            "Annual fee checks pay off."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Why do low fees matter so much?",
+              "choices": [
+                "They leave more of your returns invested to compound",
+                "They guarantee higher returns",
+                "They eliminate market risk",
+                "They make investing exciting"
+              ],
+              "answer": 0,
+              "explain": "Lower drag = faster compounding."
+            }
+          ]
+        },
+        {
+          "title": "Diversification \u2013 Don\u2019t Bet the Farm",
+          "hook": "Single\u2011stock risk is avoidable risk.",
+          "what": "Diversification spreads exposure across many companies and regions.",
+          "why": "It reduces the impact of any one failure and increases the odds of average market returns.",
+          "how": [
+            "Use total\u2011market index funds instead of picking winners.",
+            "Add global exposure rather than home\u2011country bias only.",
+            "Avoid concentrated bets in your employer\u2019s stock.",
+            "Rebalance annually to target weights.",
+            "Stay consistent across accounts."
+          ],
+          "example": "Instead of three tech names, Zoe bought a total\u2011market fund. When one sector lagged, others carried the load.",
+          "takeaways": [
+            "Average beats extreme outcomes.",
+            "Global exposure reduces single\u2011country risk.",
+            "Rebalancing controls drift."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the main benefit of diversification?",
+              "choices": [
+                "It reduces the impact of any single holding",
+                "It guarantees gains each year",
+                "It lowers taxes automatically",
+                "It increases day\u2011trading profits"
+              ],
+              "answer": 0,
+              "explain": "Spread risk to stabilize results."
+            }
+          ]
+        },
+        {
+          "title": "Behavioral Pitfalls \u2013 Your Brain on Money",
+          "hook": "The enemy is often in the mirror, not the market.",
+          "what": "Common pitfalls: chasing performance, loss aversion, overconfidence, and recency bias.",
+          "why": "Naming biases helps you design guardrails that protect your plan.",
+          "how": [
+            "Write \u2018if\u2011then\u2019 rules (e.g., if market drops 15%, then rebalance; don\u2019t sell).",
+            "Automate contributions so feelings don\u2019t drive timing.",
+            "Use a portfolio \u2018policy\u2019 document to guide future you.",
+            "Check accounts on a schedule (e.g., quarterly).",
+            "Discuss big moves with a trusted partner before acting."
+          ],
+          "example": "When markets dipped, Ken followed his pre\u2011written rule to rebalance instead of panic\u2011selling. The recovery rewarded patience.",
+          "takeaways": [
+            "Rules beat moods.",
+            "Automation reduces timing errors.",
+            "Outside perspective calms hot cognition."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which practice best guards against emotional decisions?",
+              "choices": [
+                "A written investment policy and scheduled check\u2011ins",
+                "Refreshing stock prices constantly",
+                "Following hot tips on social media",
+                "Switching strategies monthly"
+              ],
+              "answer": 0,
+              "explain": "Pre\u2011commitments protect long\u2011term plans."
+            }
+          ]
+        },
+        {
+          "title": "Rebalancing \u2013 Tidying Your Portfolio",
+          "hook": "Markets move; your target mix drifts.",
+          "what": "Rebalancing nudges holdings back to target weights, selling a bit of what grew and buying what lagged.",
+          "why": "It enforces buy\u2011low/sell\u2011high behavior mechanically.",
+          "how": [
+            "Pick a schedule (annual/semiannual) or bands (e.g., \u00b15%).",
+            "Use new contributions to reduce trading where possible.",
+            "Mind taxes when rebalancing in taxable accounts.",
+            "Document your trigger to avoid guesswork.",
+            "Stick to the rule during both booms and dips."
+          ],
+          "example": "A 70/30 portfolio drifted to 78/22. Alex rebalanced back to target using new contributions plus a small trade.",
+          "takeaways": [
+            "Rebalancing is routine maintenance.",
+            "Rules prevent performance\u2011chasing.",
+            "Tax awareness matters in taxable accounts."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s a smart way to rebalance with fewer trades?",
+              "choices": [
+                "Use new contributions to top up lagging assets",
+                "Trade daily to stay exact",
+                "Ignore allocation entirely",
+                "Only buy recent winners"
+              ],
+              "answer": 0,
+              "explain": "Directing new money reduces costs and taxes."
+            }
+          ]
+        },
+        {
+          "title": "Dollar\u2011Cost Averaging & Lump Sums",
+          "hook": "Consistency beats perfection in timing.",
+          "what": "Dollar\u2011cost averaging (DCA) invests a fixed amount on a schedule; lump sum invests all at once. Historically, lump sum often wins, but DCA helps behavior.",
+          "why": "The best choice is the one that keeps you invested and calm.",
+          "how": [
+            "For windfalls, choose lump sum if you can stomach volatility; otherwise DCA over a set period.",
+            "Automate recurring contributions monthly or per\u2011paycheque.",
+            "Avoid pausing DCA due to headlines.",
+            "Pair with your rebalancing rule.",
+            "Document your choice to avoid second\u2011guessing."
+          ],
+          "example": "When Pat received a bonus, they invested 60% immediately and DCA\u2019d the rest over 4 months to sleep better.",
+          "takeaways": [
+            "Behavioral fit matters.",
+            "Automation sustains consistency.",
+            "Documented rules reduce regret."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "Which approach is best for long\u2011term success?",
+              "choices": [
+                "The one you can stick with consistently",
+                "Whichever a friend prefers",
+                "Only lump sum, regardless of comfort",
+                "Only DCA, regardless of context"
+              ],
+              "answer": 0,
+              "explain": "Sustainability keeps you invested."
+            }
+          ]
+        },
+        {
+          "title": "Getting Started \u2013 Your First Portfolio",
+          "hook": "Simple beats fancy \u2014 especially at the start.",
+          "what": "A low\u2011cost, diversified fund or all\u2011in\u2011one portfolio removes complexity and decision fatigue.",
+          "why": "Starting now with a simple setup beats waiting to design the \u2018perfect\u2019 portfolio.",
+          "how": [
+            "Pick a risk\u2011appropriate all\u2011in\u2011one fund or a simple 2\u2011fund mix (broad stock + bonds).",
+            "Automate contributions each payday.",
+            "Write a one\u2011page policy: allocation, rebalancing, and behavior rules.",
+            "Set quarterly calendar reminders to review.",
+            "Ignore noise; focus on your savings rate."
+          ],
+          "example": "Chris chose a balanced all\u2011in\u2011one fund, set $250/pay contributions, and wrote a one\u2011page policy. He\u2019s finally in motion.",
+          "takeaways": [
+            "Action > analysis paralysis.",
+            "All\u2011in\u2011one funds are great starters.",
+            "Savings rate matters most early on."
+          ],
+          "learnMore": [],
+          "quiz": [
+            {
+              "q": "What\u2019s the main advantage of an all\u2011in\u2011one fund for beginners?",
+              "choices": [
+                "Built\u2011in diversification and auto\u2011rebalancing",
+                "Guaranteed gains",
+                "Higher fees by design",
+                "Eliminates the need for saving"
+              ],
+              "answer": 0,
+              "explain": "It handles the heavy lifting while you build the habit."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

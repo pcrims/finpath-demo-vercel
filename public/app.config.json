@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "features": {
+    "certificates": true,
+    "analytics": true,
+    "pwa": true,
+    "search": true,
+    "bookmarks": true,
+    "challengeMode": false,
+    "streaks": false
+  },
+  "xp": {
+    "badgeThresholds": {
+      "bronze": 100,
+      "silver": 250,
+      "gold": 500
+    }
+  },
+  "ui": {
+    "reducedMotionDefault": false,
+    "defaultTheme": "dark"
+  }
+}
