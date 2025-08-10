@@ -1,45 +1,14 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
+import data from "../content.json";
 
-const APP_KEY = "finpath:runner:v1.5";
+const APP_KEY = "finpath:runner:v1.6";
 
 function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
 function save(s){ try{ localStorage.setItem(APP_KEY, JSON.stringify(s)); }catch{} }
 function clsx(...c){ return c.filter(Boolean).join(" "); }
 
-// 25 lessons per chapter (placeholder content)
-function makeLessons(prefix, baseXp=10){
-  const items = [];
-  for(let i=1;i<=25;i++){
-    items.push({
-      id:`${prefix}-${i}`,
-      title:`${prefix.replace(/-/g,' ')} — Lesson ${i}`,
-      xp: baseXp,
-      body:[
-        "Placeholder instructional copy. This will be replaced with researched Canadian content and examples.",
-        "Each lesson targets a 3–5 minute read with 2 quick checks and a 'learn more' link."
-      ],
-      learnMore:[{label:"OSC – GetSmarterAboutMoney", href:"https://www.getsmarteraboutmoney.ca/"}],
-      quiz:[{q:"I understand the key idea from this lesson.", labels:["True","False"]},{q:"I could explain it to a friend.", labels:["True","False"]}]
-    });
-  }
-  return items;
-}
-
-const TRACKS = [
-  { id:"foundations", name:"Foundations", chapters:[
-    { id:"mindset", title:"Money Mindset & Habits", lessons: makeLessons("mindset", 10) },
-    { id:"budgeting", title:"Budgeting Basics", lessons: makeLessons("budgeting", 10) }
-  ]},
-  { id:"investing-basics", name:"Investing Basics", chapters:[
-    { id:"registered-accounts", title:"Registered Accounts", lessons: makeLessons("registered", 15) },
-    { id:"portfolio-basics", title:"Portfolio Basics", lessons: makeLessons("portfolio", 15) }
-  ]},
-  { id:"advanced", name:"Advanced & Strategy", chapters:[
-    { id:"tax-efficiency", title:"Tax Efficiency", lessons: makeLessons("tax", 15) },
-    { id:"tactics", title:"Allocation & Tactics", lessons: makeLessons("tactics", 15) }
-  ]}
-];
+const TRACKS = data.tracks;
 
 function recommendTrack(score){
   if(score<=3) return "foundations";
@@ -241,6 +210,49 @@ function useGame(){
   return { game, awardXp, setLastActiveRef };
 }
 
+function Progress(){
+  const state = load() || {};
+  const xp = state?.game?.xp || 0;
+  const streak = state?.game?.streak || 1;
+  const last = state?.game?.lastActiveRef?.tid || "—";
+  return <div className="max-w-5xl mx-auto px-5 py-12">
+    <h2 className="text-2xl font-black tracking-tight mb-6">Progress</h2>
+    <div className="grid md:grid-cols-4 gap-4">
+      <Card className="p-6 col-span-2"><p className="text-sm text-muted mb-2">XP</p><div className="text-3xl font-black">{xp}</div></Card>
+      <Card className="p-6"><p className="text-sm text-muted mb-2">Streak</p><div className="text-3xl font-black">{streak}d</div></Card>
+      <Card className="p-6"><p className="text-sm text-muted mb-2">Last track</p><div className="text-sm">{last}</div></Card>
+    </div>
+  </div>;
+}
+
+function Account({onRedoOnboarding}){
+  const [jsonText,setJsonText]=useState("");
+  const exportData = ()=>{ const s=load()||{}; const blob=new Blob([JSON.stringify(s,null,2)], {type:"application/json"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="finpath-progress.json"; a.click(); URL.revokeObjectURL(url); };
+  const importData = ()=>{ try{ const obj=JSON.parse(jsonText); save(obj); alert("Imported. Refresh the page."); }catch{ alert("Invalid JSON"); } };
+  const resetAll = ()=>{ if(confirm("Reset all local progress?")){ localStorage.removeItem(APP_KEY); location.reload(); } };
+  const redoQuiz = ()=>{ const s=load()||{}; save({...s, quiz:null}); onRedoOnboarding && onRedoOnboarding(); };
+  return <div className="max-w-3xl mx-auto px-5 py-12">
+    <h2 className="text-2xl font-black tracking-tight mb-6">Account</h2>
+    <Card className="p-6 mb-6">
+      <h3 className="font-bold mb-2">Onboarding</h3>
+      <div className="flex gap-2 flex-wrap">
+        <Button onClick={redoQuiz}>Redo questionnaire</Button>
+      </div>
+    </Card>
+    <Card className="p-6 mb-6">
+      <h3 className="font-bold mb-2">Data</h3>
+      <div className="flex gap-2 flex-wrap mb-3">
+        <Button onClick={exportData}>Export progress</Button>
+        <Button variant="outline" onClick={resetAll}>Reset all</Button>
+      </div>
+      <label className="label">Import JSON</label>
+      <textarea className="input" rows="6" value={jsonText} onChange={e=>setJsonText(e.target.value)} placeholder='Paste JSON exported from this app'></textarea>
+      <div className="mt-2"><Button onClick={importData}>Import</Button></div>
+    </Card>
+    <div className="text-xs text-muted">Coming soon: link email, org cohorts, and device sync.</div>
+  </div>;
+}
+
 export default function App(){
   const [route,setRoute]=useState("home");
   const [activeTrackId,setActiveTrackId]=useState(null);
@@ -304,16 +316,9 @@ export default function App(){
       />
     )}
 
-    {route==="progress" && (
-      <div className="max-w-5xl mx-auto px-5 py-12">
-        <div className="flex items-center justify-between mb-6"><h2 className="text-2xl font-black tracking-tight">Progress</h2><Button variant="outline" onClick={()=>setRoute("home")}>Back</Button></div>
-        <div className="grid md:grid-cols-4 gap-4">
-          <Card className="p-6 col-span-2"><p className="text-sm text-muted mb-2">XP</p><div className="text-3xl font-black">{game.xp||0}</div></Card>
-          <Card className="p-6"><p className="text-sm text-muted mb-2">Streak</p><div className="text-3xl font-black">{game.streak||1}d</div></Card>
-          <Card className="p-6"><p className="text-sm text-muted mb-2">Last track</p><div className="text-sm">{(load()?.game?.lastActiveRef?.tid) || "—"}</div></Card>
-        </div>
-      </div>
-    )}
+    {route==="progress" && <Progress />}
+
+    {route==="account" && <Account onRedoOnboarding={()=>setRoute("quiz")} />}
 
     <div className="max-w-6xl mx-auto px-5 pb-12"><div className="mt-8 text-xs text-muted">Education only. Not financial advice.</div></div>
   </div>;

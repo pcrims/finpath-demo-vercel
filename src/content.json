@@ -1,0 +1,5260 @@
+{
+  "tracks": [
+    {
+      "id": "foundations",
+      "name": "Foundations",
+      "chapters": [
+        {
+          "id": "mindset-&-habits",
+          "title": "Mindset & Habits",
+          "lessons": [
+            {
+              "id": "mindset-&-habits-01",
+              "title": "Why financial literacy matters in Canada",
+              "body": [
+                "Financial literacy affects daily decisions\u2014from choosing no-fee banking to picking the right registered account. A few percent in fees or interest can compound to thousands over time.",
+                "Key Canadian choices include TFSA vs RRSP, fixed vs variable mortgages, and avoiding high\u2011interest credit products. Building simple habits (automation, comparing fees, reading statements) pays off.",
+                "Treat learning like reps at the gym: 5 minutes a day, small wins, steady compounding."
+              ],
+              "quiz": [
+                {
+                  "q": "Higher fees and interest can compound into large costs over time.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Financial literacy only matters for high earners.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Learn to invest",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-02",
+              "title": "Define goals you can measure",
+              "body": [
+                "Short\u2011term goals (\u22643 years) like a $1,000 buffer need liquidity; long\u2011term goals (5+ years) like retirement can use market risk for growth.",
+                "Write goals with a number and a date (e.g., \u201c$150/month to reach $1,800 in 12 months\u201d).",
+                "Match the account to the goal: TFSA is flexible; RRSP is designed for retirement."
+              ],
+              "quiz": [
+                {
+                  "q": "A vacation next year is a long\u2011term goal.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                },
+                {
+                  "q": "RRSPs are primarily for retirement savings.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Make a savings plan",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-03",
+              "title": "Pay yourself first (automate it)",
+              "body": [
+                "Set an automatic transfer on payday to a TFSA or high\u2011interest savings. Remove willpower from the equation.",
+                "Start small ($25\u2013$50 per pay). Increase with raises or when debts are cleared.",
+                "Treat it as a bill to your future self."
+              ],
+              "quiz": [
+                {
+                  "q": "Paying yourself first means saving before spending.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Automation mainly helps by boosting consistency.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Automate savings",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-04",
+              "title": "Needs vs wants that you\u2019ll actually follow",
+              "body": [
+                "Start with 50/30/20 (needs/wants/saving+debt) as a baseline, then customize to your rent, childcare, or variable income.",
+                "Separate accounts or \u2018buckets\u2019 keep limits visible. Audit subscriptions quarterly.",
+                "Focus on sustainability, not perfection."
+              ],
+              "quiz": [
+                {
+                  "q": "Groceries belong under needs.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "A streaming upgrade is a need.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Budgeting basics",
+                  "href": "https://itools-ioutils.fcac-acfc.gc.ca/BP-PB/budget-planner"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-05",
+              "title": "Habits > one\u2011off windfalls",
+              "body": [
+                "Long\u2011run wealth usually comes from routine\u2014consistent saving, avoiding high\u2011interest debt, and staying invested.",
+                "Starting early lets compounding work longer\u2014even small amounts add up.",
+                "Track progress monthly; reset quickly after setbacks."
+              ],
+              "quiz": [
+                {
+                  "q": "Small consistent savings often beat occasional windfalls.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Compounding benefits are larger when you start earlier.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Psychology of investing",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-6",
+              "title": "Mindset & Habits Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-7",
+              "title": "Mindset & Habits Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-8",
+              "title": "Mindset & Habits Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-9",
+              "title": "Mindset & Habits Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-10",
+              "title": "Mindset & Habits Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-11",
+              "title": "Mindset & Habits Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-12",
+              "title": "Mindset & Habits Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-13",
+              "title": "Mindset & Habits Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-14",
+              "title": "Mindset & Habits Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-15",
+              "title": "Mindset & Habits Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-16",
+              "title": "Mindset & Habits Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-17",
+              "title": "Mindset & Habits Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-18",
+              "title": "Mindset & Habits Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-19",
+              "title": "Mindset & Habits Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-20",
+              "title": "Mindset & Habits Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-21",
+              "title": "Mindset & Habits Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-22",
+              "title": "Mindset & Habits Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-23",
+              "title": "Mindset & Habits Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-24",
+              "title": "Mindset & Habits Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "mindset-&-habits-topic-25",
+              "title": "Mindset & Habits Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "budgeting-basics",
+          "title": "Budgeting Basics",
+          "lessons": [
+            {
+              "id": "budgeting-basics-01",
+              "title": "What a budget actually does",
+              "body": [
+                "A budget is a plan for where your dollars will go *before* the month begins. It aligns spending with goals and reduces surprises.",
+                "List after\u2011tax income, set category targets, then track briefly each week to stay aligned.",
+                "Use tools you\u2019ll stick with: FCAC\u2019s planner, a spreadsheet, or an app."
+              ],
+              "quiz": [
+                {
+                  "q": "A budget\u2019s main job is to plan and prioritize spending.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Budgets never change once set.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Budget Planner",
+                  "href": "https://itools-ioutils.fcac-acfc.gc.ca/BP-PB/budget-planner"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-02",
+              "title": "50/30/20 as a starting point",
+              "body": [
+                "Aim 50% needs, 30% wants, 20% saving+debt. If 20% is tough, begin at 5\u201310% and step up over time.",
+                "Use sinking funds for predictable annual costs (car maintenance, gifts).",
+                "Revisit monthly; adjust when life changes."
+              ],
+              "quiz": [
+                {
+                  "q": "In 50/30/20, saving+debt is 20%.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "You should never change the ratios.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Managing expenses",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-03",
+              "title": "Tracking without burnout",
+              "body": [
+                "Weekly category checks beat daily receipt logging for most people.",
+                "Use alerts for big variances (e.g., dining\u2011out > budget).",
+                "If you share finances, agree on categories and a check\u2011in cadence."
+              ],
+              "quiz": [
+                {
+                  "q": "Weekly check\u2011ins can keep you aligned without burnout.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Alerts for overspending help course\u2011correct sooner.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Managing money",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-04",
+              "title": "Adjusting when life changes",
+              "body": [
+                "New job, rent increase, debt paid off\u2014update the plan. Redirect freed\u2011up money to goals before lifestyle creep.",
+                "Create mini funds for seasonal costs (holidays, tuition).",
+                "Do an annual deep refresh to reflect bigger shifts."
+              ],
+              "quiz": [
+                {
+                  "q": "Lifestyle creep can absorb freed\u2011up cash if you don\u2019t redirect it.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Budgets should reflect life changes.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "FCAC \u2013 Managing expenses",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-5",
+              "title": "Budgeting Basics Topic 5",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-6",
+              "title": "Budgeting Basics Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-7",
+              "title": "Budgeting Basics Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-8",
+              "title": "Budgeting Basics Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-9",
+              "title": "Budgeting Basics Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-10",
+              "title": "Budgeting Basics Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-11",
+              "title": "Budgeting Basics Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-12",
+              "title": "Budgeting Basics Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-13",
+              "title": "Budgeting Basics Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-14",
+              "title": "Budgeting Basics Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-15",
+              "title": "Budgeting Basics Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-16",
+              "title": "Budgeting Basics Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-17",
+              "title": "Budgeting Basics Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-18",
+              "title": "Budgeting Basics Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-19",
+              "title": "Budgeting Basics Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-20",
+              "title": "Budgeting Basics Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-21",
+              "title": "Budgeting Basics Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-22",
+              "title": "Budgeting Basics Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-23",
+              "title": "Budgeting Basics Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-24",
+              "title": "Budgeting Basics Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "budgeting-basics-topic-25",
+              "title": "Budgeting Basics Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investing-basics",
+      "name": "Investing Basics",
+      "chapters": [
+        {
+          "id": "registered-accounts",
+          "title": "Registered Accounts",
+          "lessons": [
+            {
+              "id": "registered-accounts-01",
+              "title": "TFSA: tax\u2011free growth & withdrawals",
+              "body": [
+                "A TFSA shelters growth *and* withdrawals from tax. It can hold cash, GICs, ETFs, and more\u2014the name is a misnomer.",
+                "Room accumulates if you\u2019re 18+ with a SIN and resident of Canada. Withdrawals add back room next calendar year.",
+                "Track your contribution room in CRA My Account. Over\u2011contributions face a penalty."
+              ],
+              "quiz": [
+                {
+                  "q": "TFSA withdrawals are taxable income.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                },
+                {
+                  "q": "TFSA withdrawals create room again the next year.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "CRA \u2013 TFSA overview",
+                  "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account.html"
+                },
+                {
+                  "label": "OSC \u2013 TFSA basics",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-02",
+              "title": "RRSP: deduct now, pay later",
+              "body": [
+                "RRSP contributions reduce taxable income; investments grow tax\u2011deferred.",
+                "Withdrawals are taxable\u2014ideally in lower\u2011income retirement years or under HBP/LLP rules.",
+                "Unused room carries forward. Check your Notice of Assessment."
+              ],
+              "quiz": [
+                {
+                  "q": "RRSP contributions reduce your taxable income.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "RRSP withdrawals are always tax\u2011free.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "CRA \u2013 RRSPs",
+                  "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/rrsps-related-plans.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-03",
+              "title": "FHSA: first home turbo",
+              "body": [
+                "FHSA blends TFSA\u2011like tax\u2011free withdrawals for a first home with RRSP\u2011like deductibility of contributions (limits apply).",
+                "You can use FHSA with the RRSP Home Buyers\u2019 Plan if you qualify.",
+                "Room mechanics and qualifying rules are specific\u2014review before contributing."
+              ],
+              "quiz": [
+                {
+                  "q": "FHSA withdrawals for a qualifying first home are tax\u2011free.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "You can combine FHSA with HBP for the same purchase if eligible.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "CRA \u2013 FHSA",
+                  "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/first-home-savings-account.html"
+                },
+                {
+                  "label": "OSC \u2013 FHSA guide",
+                  "href": "https://www.getsmarteraboutmoney.ca/learning-path/rrsps/how-the-first-home-savings-account-fhsa-works/"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-4",
+              "title": "Registered Accounts Topic 4",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-5",
+              "title": "Registered Accounts Topic 5",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-6",
+              "title": "Registered Accounts Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-7",
+              "title": "Registered Accounts Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-8",
+              "title": "Registered Accounts Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-9",
+              "title": "Registered Accounts Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-10",
+              "title": "Registered Accounts Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-11",
+              "title": "Registered Accounts Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-12",
+              "title": "Registered Accounts Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-13",
+              "title": "Registered Accounts Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-14",
+              "title": "Registered Accounts Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-15",
+              "title": "Registered Accounts Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-16",
+              "title": "Registered Accounts Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-17",
+              "title": "Registered Accounts Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-18",
+              "title": "Registered Accounts Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-19",
+              "title": "Registered Accounts Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-20",
+              "title": "Registered Accounts Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-21",
+              "title": "Registered Accounts Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-22",
+              "title": "Registered Accounts Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-23",
+              "title": "Registered Accounts Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-24",
+              "title": "Registered Accounts Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "registered-accounts-topic-25",
+              "title": "Registered Accounts Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "portfolio-basics",
+          "title": "Portfolio Basics",
+          "lessons": [
+            {
+              "id": "portfolio-basics-01",
+              "title": "Risk and return 101",
+              "body": [
+                "Higher expected return usually comes with higher volatility. Cash is stable but grows slowly; stocks can grow faster with bumps.",
+                "Align risk to time horizon\u2014longer horizons can handle more equity exposure.",
+                "Focus on ranges and discipline, not predictions."
+              ],
+              "quiz": [
+                {
+                  "q": "Stocks typically carry more volatility than GICs.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "You can get high returns with no risk routinely.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Risk & return",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-02",
+              "title": "Diversification & indexing",
+              "body": [
+                "Diversification spreads risk across many holdings; index funds and broad ETFs do this cheaply.",
+                "Avoid concentration in single stocks or sectors unless you accept higher risk.",
+                "All\u2011in\u2011one asset\u2011allocation ETFs provide a simple diversified core."
+              ],
+              "quiz": [
+                {
+                  "q": "A broad index ETF can hold hundreds of companies.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Diversification reduces the impact of one company failing.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 ETFs & index funds",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-03",
+              "title": "Fees & MERs compound too",
+              "body": [
+                "MERs reduce your net return every year. A 2% fee vs 0.25% can mean tens of thousands over decades.",
+                "Compare costs before buying; watch trading commissions and account fees.",
+                "Read fund fact sheets to see MER and risk rating."
+              ],
+              "quiz": [
+                {
+                  "q": "Higher MERs leave you with more return.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                },
+                {
+                  "q": "Costs compound over time just like returns.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Investing costs",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-04",
+              "title": "Asset mix & rebalancing",
+              "body": [
+                "Decide your stock/bond/cash mix based on goals and risk tolerance.",
+                "Rebalance periodically (e.g., annually) to reset to targets\u2014this buys low/sells high mechanically.",
+                "All\u2011in\u2011one ETFs can automate the process."
+              ],
+              "quiz": [
+                {
+                  "q": "Rebalancing keeps you aligned to your target mix.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "All\u2011in\u2011one ETFs can handle rebalancing for you.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Asset allocation",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-5",
+              "title": "Portfolio Basics Topic 5",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-6",
+              "title": "Portfolio Basics Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-7",
+              "title": "Portfolio Basics Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-8",
+              "title": "Portfolio Basics Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-9",
+              "title": "Portfolio Basics Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-10",
+              "title": "Portfolio Basics Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-11",
+              "title": "Portfolio Basics Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-12",
+              "title": "Portfolio Basics Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-13",
+              "title": "Portfolio Basics Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-14",
+              "title": "Portfolio Basics Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-15",
+              "title": "Portfolio Basics Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-16",
+              "title": "Portfolio Basics Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-17",
+              "title": "Portfolio Basics Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-18",
+              "title": "Portfolio Basics Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-19",
+              "title": "Portfolio Basics Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-20",
+              "title": "Portfolio Basics Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-21",
+              "title": "Portfolio Basics Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-22",
+              "title": "Portfolio Basics Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-23",
+              "title": "Portfolio Basics Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-24",
+              "title": "Portfolio Basics Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "portfolio-basics-topic-25",
+              "title": "Portfolio Basics Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced",
+      "chapters": [
+        {
+          "id": "tax-efficiency",
+          "title": "Tax Efficiency",
+          "lessons": [
+            {
+              "id": "tax-efficiency-01",
+              "title": "Capital gains & dividends (non\u2011registered)",
+              "body": [
+                "Outside registered accounts, realized capital gains are partially taxable; only when you sell. Eligible Canadian dividends may receive a dividend tax credit, lowering effective tax.",
+                "Inside registered accounts (TFSA/RRSP/FHSA), tax treatment differs\u2014TFSA gains/withdrawals are tax\u2011free; RRSP withdrawals are taxable later.",
+                "Keep records for ACB (adjusted cost base) in taxable accounts."
+              ],
+              "quiz": [
+                {
+                  "q": "Capital gains tax applies when gains are unrealized.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                },
+                {
+                  "q": "Eligible Canadian dividends may receive a tax credit.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "CRA \u2013 Capital gains",
+                  "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/capital-gains.html"
+                },
+                {
+                  "label": "CRA \u2013 Dividend tax credit",
+                  "href": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/tax-return/completing-a-tax-return/deductions-credits-expenses/line-40425-dividend-tax-credit.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-02",
+              "title": "Asset location for after\u2011tax returns",
+              "body": [
+                "Place interest\u2011heavy assets in RRSP/TFSA when possible; keep tax\u2011efficient equity ETFs in taxable if needed.",
+                "Consider foreign withholding tax on dividends; RRSP treaties can differ from TFSA treatment.",
+                "Balance theory with simplicity\u2014don\u2019t over\u2011engineer small portfolios."
+              ],
+              "quiz": [
+                {
+                  "q": "Asset location aims to improve after\u2011tax returns.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Foreign withholding taxes never matter in registered accounts.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Taxes & investing",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-3",
+              "title": "Tax Efficiency Topic 3",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-4",
+              "title": "Tax Efficiency Topic 4",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-5",
+              "title": "Tax Efficiency Topic 5",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-6",
+              "title": "Tax Efficiency Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-7",
+              "title": "Tax Efficiency Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-8",
+              "title": "Tax Efficiency Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-9",
+              "title": "Tax Efficiency Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-10",
+              "title": "Tax Efficiency Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-11",
+              "title": "Tax Efficiency Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-12",
+              "title": "Tax Efficiency Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-13",
+              "title": "Tax Efficiency Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-14",
+              "title": "Tax Efficiency Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-15",
+              "title": "Tax Efficiency Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-16",
+              "title": "Tax Efficiency Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-17",
+              "title": "Tax Efficiency Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-18",
+              "title": "Tax Efficiency Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-19",
+              "title": "Tax Efficiency Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-20",
+              "title": "Tax Efficiency Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-21",
+              "title": "Tax Efficiency Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-22",
+              "title": "Tax Efficiency Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-23",
+              "title": "Tax Efficiency Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-24",
+              "title": "Tax Efficiency Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "tax-efficiency-topic-25",
+              "title": "Tax Efficiency Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "allocation-&-tactics",
+          "title": "Allocation & Tactics",
+          "lessons": [
+            {
+              "id": "allocation-&-tactics-01",
+              "title": "DCA vs lump\u2011sum",
+              "body": [
+                "Dollar\u2011cost averaging smooths entry by investing a fixed amount on a schedule; lump\u2011sum invests all at once.",
+                "Historically, lump\u2011sum often wins if markets have a positive drift, but DCA reduces regret and timing risk.",
+                "Pick the approach you\u2019ll stick with, then automate."
+              ],
+              "quiz": [
+                {
+                  "q": "DCA invests a fixed amount on a schedule.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Lump\u2011sum always beats DCA for every investor.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Working with an advisor or firm",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-02",
+              "title": "Behavioral guardrails",
+              "body": [
+                "Create rules ahead of time: rebalancing bands, contribution dates, and a \u2018cool\u2011off\u2019 rule before selling.",
+                "Hide performance during market drawdowns if it causes panic selling.",
+                "Document your investment policy in one page and revisit annually."
+              ],
+              "quiz": [
+                {
+                  "q": "Pre\u2011committing rules can reduce emotional decisions.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "Checking portfolio value constantly reduces risk.",
+                  "labels": [
+                    "False",
+                    "True"
+                  ]
+                }
+              ],
+              "xp": 12,
+              "learnMore": [
+                {
+                  "label": "OSC \u2013 Psychology of investing",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-3",
+              "title": "Allocation & Tactics Topic 3",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-4",
+              "title": "Allocation & Tactics Topic 4",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-5",
+              "title": "Allocation & Tactics Topic 5",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-6",
+              "title": "Allocation & Tactics Topic 6",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-7",
+              "title": "Allocation & Tactics Topic 7",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-8",
+              "title": "Allocation & Tactics Topic 8",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-9",
+              "title": "Allocation & Tactics Topic 9",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-10",
+              "title": "Allocation & Tactics Topic 10",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-11",
+              "title": "Allocation & Tactics Topic 11",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-12",
+              "title": "Allocation & Tactics Topic 12",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-13",
+              "title": "Allocation & Tactics Topic 13",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-14",
+              "title": "Allocation & Tactics Topic 14",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-15",
+              "title": "Allocation & Tactics Topic 15",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-16",
+              "title": "Allocation & Tactics Topic 16",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-17",
+              "title": "Allocation & Tactics Topic 17",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-18",
+              "title": "Allocation & Tactics Topic 18",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-19",
+              "title": "Allocation & Tactics Topic 19",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-20",
+              "title": "Allocation & Tactics Topic 20",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-21",
+              "title": "Allocation & Tactics Topic 21",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-22",
+              "title": "Allocation & Tactics Topic 22",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-23",
+              "title": "Allocation & Tactics Topic 23",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-24",
+              "title": "Allocation & Tactics Topic 24",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            },
+            {
+              "id": "allocation-&-tactics-topic-25",
+              "title": "Allocation & Tactics Topic 25",
+              "body": [
+                "Applied practice: summarize the core idea in 2 lines and list one action you\u2019ll take this week.",
+                "Canadian angle: check FCAC/OSC/CRA links to confirm account/tax rules before acting."
+              ],
+              "quiz": [
+                {
+                  "q": "I can explain the idea in 2 lines.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                },
+                {
+                  "q": "I know which official resource to check.",
+                  "labels": [
+                    "True",
+                    "False"
+                  ]
+                }
+              ],
+              "xp": 10,
+              "learnMore": [
+                {
+                  "label": "GetSmarterAboutMoney",
+                  "href": "https://www.getsmarteraboutmoney.ca/"
+                },
+                {
+                  "label": "FCAC",
+                  "href": "https://www.canada.ca/en/financial-consumer-agency.html"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
