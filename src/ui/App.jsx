@@ -1,15 +1,19 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 
-const APP_KEY = "finpath:runner:v1.3";
+const APP_KEY = "finpath:runner:v1.4";
 
 const THEMES = {
-  foundations: { bg:"lemon", accents:["#111","#FF7A59","#1F2937"] },
-  "investing-basics": { bg:"lilac", accents:["#111","#6C5CE7","#EF476F"] },
-  advanced: { bg:"mint", accents:["#111","#10B981","#111827"] }
+  foundations: { hue:"#D8FF3F" },
+  "investing-basics": { hue:"#B8E62E" },
+  advanced: { hue:"#D8FF3F" }
 };
 
-// Minimal seed content; lessons expanded to 25 per track (bodies concise for now)
+function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
+function save(s){ try{ localStorage.setItem(APP_KEY, JSON.stringify(s)); }catch{} }
+function clsx(...c){ return c.filter(Boolean).join(" "); }
+
+// Build 25 lessons per chapter (placeholder content; to be expanded)
 function makeLessons(prefix, baseXp=10){
   const items = [];
   for(let i=1;i<=25;i++){
@@ -18,8 +22,9 @@ function makeLessons(prefix, baseXp=10){
       title:`${prefix.replace(/-/g,' ')} — Lesson ${i}`,
       xp: baseXp,
       body:[
-        "This is placeholder instructional content. In the content pass we’ll expand each lesson with Canadian-specific guidance, examples, and a quick interactive.",
-        "Key idea: keep lessons 3–5 minutes, with 2 knowledge checks and 1 ‘learn more’ link to an authoritative Canadian source."],
+        "Placeholder instructional copy. This will be replaced with researched Canadian content and examples.",
+        "Each lesson targets a 3–5 minute read with 2 quick checks and a 'learn more' link."
+      ],
       learnMore:[{label:"OSC – GetSmarterAboutMoney", href:"https://www.getsmarteraboutmoney.ca/"}],
       quiz:[{q:"I understand the key idea from this lesson.", labels:["True","False"]},{q:"I could explain it to a friend.", labels:["True","False"]}]
     });
@@ -28,30 +33,24 @@ function makeLessons(prefix, baseXp=10){
 }
 
 const TRACKS = [
-  { id:"foundations", name:"Foundations", color:"#111", chapters:[
+  { id:"foundations", name:"Foundations", chapters:[
     { id:"mindset", title:"Money Mindset & Habits", lessons: makeLessons("mindset", 10) },
     { id:"budgeting", title:"Budgeting Basics", lessons: makeLessons("budgeting", 10) }
   ]},
-  { id:"investing-basics", name:"Investing Basics", color:"#111", chapters:[
+  { id:"investing-basics", name:"Investing Basics", chapters:[
     { id:"registered-accounts", title:"Registered Accounts", lessons: makeLessons("registered", 15) },
     { id:"portfolio-basics", title:"Portfolio Basics", lessons: makeLessons("portfolio", 15) }
   ]},
-  { id:"advanced", name:"Advanced & Strategy", color:"#111", chapters:[
+  { id:"advanced", name:"Advanced & Strategy", chapters:[
     { id:"tax-efficiency", title:"Tax Efficiency", lessons: makeLessons("tax", 15) },
     { id:"tactics", title:"Allocation & Tactics", lessons: makeLessons("tactics", 15) }
   ]}
 ];
 
-function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
-function save(s){ try{ localStorage.setItem(APP_KEY, JSON.stringify(s)); }catch{} }
-function clsx(...c){ return c.filter(Boolean).join(" "); }
-
-function useTheme(){ const [mode,setMode]=useState("light"); return { theme:mode, setTheme:setMode }; }
-
-function Card({children,className,style}){ return <div className={clsx("card shadow-soft", className)} style={style}>{children}</div>; }
+function Card({children,className,style}){ return <div className={clsx("card", className)} style={style}>{children}</div>; }
 function Button({children,onClick,variant="primary",className,disabled}){
   const base="btn text-sm";
-  const styles={ primary:"btn-primary", outline:"btn-outline", ghost:"" }[variant];
+  const styles={ primary:"btn-primary", outline:"btn-outline", ghost:"btn-ghost" }[variant];
   return <button disabled={disabled} onClick={onClick} className={clsx(base, styles, className)}>{children}</button>;
 }
 function ProgressBar({value}){ return <div className="w-full h-2 rounded-full bg-black/10"><div className="h-2 rounded-full bg-black" style={{width:`${Math.min(100,Math.max(0,value))}%`}}/></div>; }
@@ -59,7 +58,7 @@ function ProgressBar({value}){ return <div className="w-full h-2 rounded-full bg
 function Header({onNav}){
   const [open,setOpen]=useState(false);
   const nav=[{k:"home",label:"Home"},{k:"tracks",label:"Tracks"},{k:"progress",label:"Progress"},{k:"account",label:"Account"}];
-  return <div className="sticky top-0 z-40 backdrop-blur bg-white/75">
+  return <div className="sticky top-0 z-40 backdrop-blur bg-white/80">
     <div className="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
       <div className="flex items-center gap-3"><div className="w-8 h-8 rounded-lg bg-black"/><span className="font-black tracking-tight text-lg">FinPath</span></div>
       <div className="hidden md:flex items-center gap-2">{nav.map(n=>(<Button key={n.k} variant="ghost" onClick={()=>onNav(n.k)}>{n.label}</Button>))}</div>
@@ -75,42 +74,30 @@ function Header({onNav}){
   </div>;
 }
 
-// Generative illustration (deterministic by seed + theme palette)
-function Illustration({ seed="x", themeKey="foundations" }){
-  const theme = THEMES[themeKey] || THEMES.foundations;
-  const colors = theme.accents;
-  const h = [...seed].reduce((a,c)=>a+c.charCodeAt(0),0);
-  const rng = (min,max,i)=>{ const v=Math.sin(h* (i+3.7)) * 43758.5453; const r=v-Math.floor(v); return min + (max-min)*r; };
-  const circles = Array.from({length:6}).map((_,i)=>({ x:rng(10,90,i), y:rng(10,90,i+10), r:rng(6,18,i+20), c:colors[i%colors.length] }));
-  const rects = Array.from({length:4}).map((_,i)=>({ x:rng(0,70,i+30), y:rng(0,60,i+40), w:rng(20,50,i+50), h:rng(8,22,i+60), c:colors[(i+1)%colors.length], rx:8 }));
-  return <svg viewBox="0 0 100 70" className="w-full h-40 rounded-2xl" style={{background:`var(--card)`}} aria-hidden>
-    <defs><linearGradient id={`g-${h}`} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={colors[1]} stopOpacity=".15"/><stop offset="1" stopColor={colors[2]} stopOpacity=".15"/></linearGradient></defs>
-    <rect x="0" y="0" width="100" height="70" fill={`url(#g-${h})`} rx="14" />
-    {rects.map((r,i)=>(<rect key={i} x={r.x} y={r.y} width={r.w} height={r.h} rx={r.rx} fill={r.c} opacity=".9" />))}
-    {circles.map((c,i)=>(<circle key={i} cx={c.x} cy={c.y} r={c.r} fill={c.c} opacity=".85" />))}
+// Deterministic SVG illustrations per seed (neon accent)
+function Illustration({ seed="x" }){
+  const code = [...seed].reduce((a,c)=>a+c.charCodeAt(0),0);
+  const colors = ["#000","#2F3337","#D8FF3F","#B8E62E"];
+  const N=6; const shapes=[];
+  for(let i=0;i<N;i++){
+    const r=((code*(i+3))%100)/100;
+    shapes.push({ x:8+r*80, y:12+((code*i)%50), w:20+((code*i)%30), h:8+((code*(i+7))%18), c:colors[i%colors.length], rx:10 });
+  }
+  return <svg viewBox="0 0 100 70" className="w-full h-40 round-big" aria-hidden>
+    <rect x="0" y="0" width="100" height="70" fill="#F3F4F6" rx="18" />
+    {shapes.map((s,i)=>(<rect key={i} x={s.x} y={s.y} width={s.w} height={s.h} fill={s.c} rx={s.rx} opacity=".9" />))}
+    <circle cx={(code%60)+20} cy="18" r="6" fill="#D8FF3F" />
   </svg>;
 }
 
-function startOfWeek(date = new Date()) { const d = new Date(date); const day = d.getDay(); const diff = (day===0?-6:1)-day; d.setDate(d.getDate()+diff); d.setHours(0,0,0,0); return d; }
-function weekId(date = new Date()){ return startOfWeek(date).toISOString().slice(0,10); }
-function defaultWeekly(){ return { weekId: weekId(), target:5, completed:0 }; }
-function useGame(){
-  const [game,setGame]=useState(()=> (load()?.game) || { xp:0, streak:0, lastActive:null, badges:[], weekly: defaultWeekly(), lastActiveRef:null });
-  useEffect(()=>{ const today=new Date().toDateString(); const y=new Date(Date.now()-86400000).toDateString(); if(game.lastActive!==today){ const n=game.lastActive===y?(game.streak||0)+1:1; setGame(g=>({ ...g, lastActive:today, streak:n })); } },[]);
-  useEffect(()=>{ const s=load()||{}; save({...s, game}); },[game]);
-  const awardXp = (amt)=> setGame(g=>({ ...g, xp:(g.xp||0)+amt, badges: Array.from(new Set([...(g.badges||[]), "First Steps"])).filter(Boolean) }));
-  const setLastActiveRef = (ref)=> setGame(g=>({ ...g, lastActiveRef: ref }));
-  return { game, awardXp, setLastActiveRef };
-}
-
-// Swipe onboarding (no on-card labels)
+// Onboarding questionnaire
 function SwipeCard({ text, onSwipeLeft, onSwipeRight }){
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-160, 0, 160], [-10, 0, 10]);
   const threshold = 120; const power = 800;
   const fling = (dir)=>{ const target = (dir>0 ? window.innerWidth : -window.innerWidth) + 240; x.stop(); x.set(target); dir>0?onSwipeRight():onSwipeLeft(); setTimeout(()=>x.set(0),0); };
   return <div className="relative">
-    <motion.div style={{ x, rotate }} className="card shadow-soft p-6 sm:p-8" drag="x" dragConstraints={{left:0,right:0}} dragElastic={0.2}
+    <motion.div style={{ x, rotate }} className="card p-6 sm:p-8" drag="x" dragConstraints={{left:0,right:0}} dragElastic={0.2}
       onDragEnd={(e, info)=>{ const X=info.offset.x, V=info.velocity.x; if(X>threshold||V>power){ fling(1); } else if(X<-threshold||V<-power){ fling(-1);} else { x.set(0);} }}>
       <div className="min-h-[120px] sm:min-h-[140px] flex items-center"><h2 className="text-xl sm:text-2xl font-black tracking-tight">{text}</h2></div>
     </motion.div>
@@ -125,21 +112,31 @@ function Questionnaire({ questions, onFinish }){
   const record=(val)=>{ const next=[...answers]; next[i]=val; setAnswers(next); setI(i+1); };
   if(done) return <div className="max-w-sm mx-auto px-5 py-14"><Card className="p-8 text-center"><div className="text-6xl mb-2">🧭</div><h2 className="text-2xl font-black mb-2">You're set!</h2><p className="text-muted mb-4">We’ll recommend a starting point based on your answers.</p><Button onClick={()=>onFinish(answers.filter(Boolean).length)}>See recommendation</Button></Card></div>;
   return <div className="max-w-sm mx-auto px-5 py-12 select-none">
-    <div className="flex items-center justify-between mb-4"><div className="text-sm text-muted">Question {i+1} of {questions.length}</div><div className="w-40"><ProgressBar value={(i/questions.length)*100} /></div></div>
+    <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center gap-2">
+        <span className="chip">Question {i+1}/{questions.length}</span>
+      </div>
+      <div className="w-40"><ProgressBar value={(i/questions.length)*100} /></div>
+    </div>
     <SwipeCard key={q.text} text={q.text} onSwipeLeft={()=>record(false)} onSwipeRight={()=>record(true)} />
-    <div className="mt-6 grid grid-cols-2 gap-3"><Button onClick={()=>record(true)}>{q.labels?.[0]??"Yes"}</Button><Button variant="outline" onClick={()=>record(false)}>{q.labels?.[1]??"No"}</Button></div>
+    <div className="mt-6 grid grid-cols-2 gap-3">
+      <Button onClick={()=>record(true)}>Yes</Button>
+      <Button variant="outline" onClick={()=>record(false)}>No</Button>
+    </div>
+    <div className="mt-3 text-center text-xs text-muted">Tip: drag the card <span className="kbd">→</span> for Yes or <span className="kbd">←</span> for No</div>
   </div>;
 }
 
 function Home({ onContinue }){
   return <div className="max-w-6xl mx-auto px-5 py-10">
     <div className="grid md:grid-cols-2 gap-6 items-stretch">
-      <Card className="p-7 md:p-10 bg-lilac">
+      <Card className="p-7 md:p-10">
+        <div className="chip inline-block mb-3 bg-neon">Mobile-first learning</div>
         <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-3">Your money, made clear.</h1>
-        <p className="text-muted max-w-md">Tap Continue to pick up exactly where you left off, or browse tracks to start a new path.</p>
+        <p className="text-muted max-w-md">Continue where you left off, or start a track tailored to your goals.</p>
         <div className="mt-6 flex gap-3"><Button onClick={onContinue}>Continue learning</Button><Button variant="outline" onClick={onContinue}>Browse tracks</Button></div>
       </Card>
-      <Card className="p-0 overflow-hidden"><Illustration seed="hero" themeKey="investing-basics" /></Card>
+      <Card className="p-0 overflow-hidden"><Illustration seed="hero" /></Card>
     </div>
   </div>;
 }
@@ -147,13 +144,15 @@ function Home({ onContinue }){
 function Tracks({ tracks, onEnterTrack }){
   return <div className="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-6">
     {tracks.map(t=>{
-      const theme = THEMES[t.id]||THEMES.foundations;
       return (<Card key={t.id} className="overflow-hidden">
-        <div className={clsx("h-2 w-full", `bg-${theme.bg}`)} />
+        <div className="h-2 w-full neon" />
         <div className="p-6">
-          <h3 className="font-bold text-lg">{t.name}</h3>
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="font-bold text-lg">{t.name}</h3>
+            <span className="chip">Track</span>
+          </div>
           <p className="text-muted text-sm mb-4">{t.chapters.length} chapters • {t.chapters.reduce((a,c)=>a+c.lessons.length,0)} lessons</p>
-          <Illustration seed={t.id} themeKey={t.id} />
+          <Illustration seed={t.id} />
           <div className="mt-4"><Button onClick={()=>onEnterTrack(t.id)}>Start track</Button></div>
         </div>
       </Card>);
@@ -161,13 +160,13 @@ function Tracks({ tracks, onEnterTrack }){
   </div>;
 }
 
-function RunnerHeader({ title, step, total, onQuit, themeKey="foundations" }){
+function RunnerHeader({ title, step, total, onQuit }){
   const pct = Math.round((step/Math.max(1,total))*100);
-  return <div className="sticky top-0 z-30 backdrop-blur bg-white/75">
+  return <div className="sticky top-0 z-30 backdrop-blur bg-white/85">
     <div className="max-w-4xl mx-auto px-5 py-3">
       <div className="flex items-center justify-between">
         <div className="font-bold truncate">{title}</div>
-        <button onClick={onQuit} className="text-sm text-muted rounded px-2 py-1">Quit</button>
+        <button onClick={onQuit} className="chip">Quit</button>
       </div>
       <div className="mt-2"><ProgressBar value={pct} /></div>
       <div className="mt-1 text-xs text-muted">{step} / {total}</div>
@@ -176,21 +175,20 @@ function RunnerHeader({ title, step, total, onQuit, themeKey="foundations" }){
 }
 
 function TrackRunner({ track, onDone, onQuit, updateResume, awardXp }){
-  const themeKey = track.id;
   const lessons = track.chapters.flatMap(c=> c.lessons.map(l=> ({...l, _cid:c.id, _cTitle:c.title})));
   const [idx,setIdx]=useState(()=>{ const s = load(); const ref = s?.runner?.[track.id]?.index ?? 0; return Math.min(Math.max(0, ref), lessons.length-1); });
   useEffect(()=>{ const s=load()||{}; save({...s, runner:{ ...(s.runner||{}), [track.id]:{ index: idx } }}); },[idx, track.id]);
   useEffect(()=>{ updateResume && updateResume({ tid: track.id, cid: lessons[idx]._cid, lid: lessons[idx].id }); },[idx, track.id]);
   useEffect(()=>{ window.scrollTo({ top: 0, behavior: "auto" }); },[idx]);
   const current = lessons[idx]; const total = lessons.length; const done = idx >= total;
-  if(done) return <div className="max-w-3xl mx-auto px-5 py-16"><Card className="p-8 text-center bg-mint"><div className="text-6xl mb-2">🏁</div><h3 className="text-xl font-bold">Track complete</h3><p className="text-muted mb-4">Great run through {track.name}.</p><Button onClick={onDone}>Back to Tracks</Button></Card></div>;
+  if(done) return <div className="max-w-3xl mx-auto px-5 py-16"><Card className="p-8 text-center"><div className="text-6xl mb-2">🏁</div><h3 className="text-xl font-bold">Track complete</h3><p className="text-muted mb-4">Great run through {track.name}.</p><Button onClick={onDone}>Back to Tracks</Button></Card></div>;
   return <div>
-    <RunnerHeader title={`${track.name} • ${current._cTitle}`} step={idx+1} total={total} onQuit={onQuit} themeKey={themeKey} />
-    <LessonInline key={current.id} themeKey={themeKey} lesson={current} onFinish={(earnedXp)=>{ awardXp(earnedXp); if(idx+1<total){ setIdx(idx+1); } else { onDone(); } }} />
+    <RunnerHeader title={`${track.name} • ${current._cTitle}`} step={idx+1} total={total} onQuit={onQuit} />
+    <LessonInline key={current.id} lesson={current} onFinish={(earnedXp)=>{ awardXp(earnedXp); if(idx+1<total){ setIdx(idx+1); } else { onDone(); } }} />
   </div>;
 }
 
-function LessonInline({ lesson, onFinish, themeKey }){
+function LessonInline({ lesson, onFinish }){
   const [answers,setAnswers]=useState({});
   const [complete,setComplete]=useState(false);
   const [show,setShow]=useState(false);
@@ -202,7 +200,7 @@ function LessonInline({ lesson, onFinish, themeKey }){
   const correct = (lesson.quiz||[]).reduce((acc,q,i)=> acc + ((answers[i]??-1)===0?1:0), 0);
   return <div className="max-w-4xl mx-auto px-5 py-8">
     <Card className="overflow-hidden">
-      <Illustration seed={lesson.id} themeKey={themeKey} />
+      <Illustration seed={lesson.id} />
       <div className="p-7">
         <div className="mb-1 text-xs uppercase tracking-wide text-muted">{lesson.title}</div>
         <div className="prose max-w-none">{(lesson.body||[]).map((p,i)=>(<p key={i} className="text-[15px]">{p}</p>))}</div>
@@ -210,7 +208,7 @@ function LessonInline({ lesson, onFinish, themeKey }){
       </div>
     </Card>
     <Card className="p-6 mt-6">
-      <h3 className="font-bold mb-3">Quick Check</h3>
+      <div className="flex items-center justify-between mb-3"><h3 className="font-bold">Quick Check</h3><span className="chip neon">+{lesson.xp||10} XP</span></div>
       {(lesson.quiz||[]).map((q,i)=>(
         <div key={i} className="mb-4">
           <p className="mb-2">{q.q || q}</p>
@@ -232,7 +230,7 @@ function LessonInline({ lesson, onFinish, themeKey }){
     <AnimatePresence>
       {show && (
         <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} className="fixed inset-0 z-50 bg-black/40 grid place-items-center">
-          <Card className="p-6 max-w-md w-[92vw] bg-peach">
+          <Card className="p-6 max-w-md w-[92vw]">
             <div className="text-center space-y-2">
               <div className="text-5xl">🎉</div>
               <h3 className="text-xl font-bold">Nice work!</h3>
@@ -246,6 +244,15 @@ function LessonInline({ lesson, onFinish, themeKey }){
       )}
     </AnimatePresence>
   </div>;
+}
+
+function useGame(){
+  const [game,setGame]=useState(()=> (load()?.game) || { xp:0, streak:0, lastActive:null, badges:[], weekly: { target:5, completed:0 }, lastActiveRef:null });
+  useEffect(()=>{ const today=new Date().toDateString(); const y=new Date(Date.now()-86400000).toDateString(); if(game.lastActive!==today){ const n=game.lastActive===y?(game.streak||0)+1:1; setGame(g=>({ ...g, lastActive:today, streak:n })); } },[]);
+  useEffect(()=>{ const s=load()||{}; save({...s, game}); },[game]);
+  const awardXp = (amt)=> setGame(g=>({ ...g, xp:(g.xp||0)+amt, badges: Array.from(new Set([...(g.badges||[]), "First Steps"])).filter(Boolean) }));
+  const setLastActiveRef = (ref)=> setGame(g=>({ ...g, lastActiveRef: ref }));
+  return { game, awardXp, setLastActiveRef };
 }
 
 export default function App(){
@@ -271,11 +278,11 @@ export default function App(){
     <Header onNav={(r)=>setRoute(r)} />
 
     {route==="quiz" && <Questionnaire questions={[
-      { text: "Do you keep a monthly budget?", labels: ["Yes","No"] },
-      { text: "Do you have an emergency fund?", labels: ["Yes","No"] },
-      { text: "Do you know the difference between a TFSA and an RRSP?", labels: ["Yes","No"] },
-      { text: "Have you bought stocks, ETFs, or mutual funds before?", labels: ["Yes","No"] },
-      { text: "Do you understand diversification?", labels: ["Yes","No"] }
+      { text: "Do you keep a monthly budget?" },
+      { text: "Do you have an emergency fund?" },
+      { text: "Do you know the difference between a TFSA and an RRSP?" },
+      { text: "Have you bought stocks, ETFs, or mutual funds before?" },
+      { text: "Do you understand diversification?" }
     ]} onFinish={()=>setRoute("home")} />}
 
     {route==="home" && <Home onContinue={continueLearning} />}

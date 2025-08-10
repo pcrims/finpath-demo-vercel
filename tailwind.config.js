@@ -3,21 +3,20 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: { display: ['ui-sans-serif','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Inter','Helvetica Neue','Arial','Noto Sans'] },
       colors: {
-        ink: '#0B0B0E',
-        paper: '#F6F6F8',
-        card: '#FFFFFF',
-        lilac: '#EAE4FF',
-        mint: '#E3F6F1',
-        peach: '#FFE6E0',
-        lemon: '#FFF6CF'
+        ink: "#0C0D0E",
+        paper: "#EFF1F3",
+        surface: "#F7F8F9",
+        chip: "#ECEEF1",
+        neon: "#D8FF3F",
+        neonDark: "#B8E62E",
+        mute: "#6B7280"
       },
       boxShadow: {
-        soft: '0 12px 40px rgba(0,0,0,.06), 0 2px 12px rgba(0,0,0,.04)',
-        softDark: '0 12px 40px rgba(0,0,0,.45), 0 2px 12px rgba(0,0,0,.35)'
+        depth: "0 18px 44px rgba(0,0,0,.08), 0 2px 10px rgba(0,0,0,.05)",
+        depthDark: "0 18px 44px rgba(0,0,0,.45), 0 2px 10px rgba(0,0,0,.35)"
       },
-      borderRadius: { xl2: '1.25rem', pill: '999px' }
+      borderRadius: { xl2: "1.25rem", pill: "999px" }
     }
   },
   plugins: [],
