@@ -2,27 +2,25 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 import data from "../content.json";
 
-const APP_KEY = "finpath:runner:v1.6";
+const APP_KEY = "finpath:runner:v1.8";
+const TRACKS = data.tracks;
 
 function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
 function save(s){ try{ localStorage.setItem(APP_KEY, JSON.stringify(s)); }catch{} }
 function clsx(...c){ return c.filter(Boolean).join(" "); }
 
-const TRACKS = data.tracks;
-
-function recommendTrack(score){
-  if(score<=3) return "foundations";
-  if(score<=7) return "investing-basics";
-  return "advanced";
-}
+function recommendTrack(score){ if(score<=3) return "foundations"; if(score<=7) return "investing-basics"; return "advanced"; }
 
 function Card({children,className,style}){ return <div className={clsx("card", className)} style={style}>{children}</div>; }
 function Button({children,onClick,variant="primary",className,disabled}){
-  const base="btn text-sm";
-  const styles={ primary:"btn-primary", outline:"btn-outline", ghost:"btn-ghost" }[variant];
+  const base="btn text-sm"; const styles={ primary:"btn-primary", outline:"btn-outline", ghost:"btn-ghost" }[variant];
   return <button disabled={disabled} onClick={onClick} className={clsx(base, styles, className)}>{children}</button>;
 }
-function ProgressBar({value}){ return <div className="w-full h-2 rounded-full bg-black/10"><div className="h-2 rounded-full bg-black" style={{width:`${Math.min(100,Math.max(0,value))}%`}}/></div>; }
+function ProgressBar({value,flash}){
+  const val = Math.min(100,Math.max(0,value||0));
+  const flashClass = ([25,50,75,100].includes(Math.round(val)) && flash) ? "pulse" : "";
+  return <div className={clsx("w-full h-2 rounded-full bg-black/10", flashClass)}><div className="h-2 rounded-full bg-black" style={{width:`${val}%`}}/></div>;
+}
 
 function Header({onNav}){
   const [open,setOpen]=useState(false);
@@ -43,15 +41,32 @@ function Header({onNav}){
   </div>;
 }
 
-function SwipeCard({ text, onSwipeLeft, onSwipeRight }){
-  const x = useMotionValue(0);
-  const rotate = useTransform(x, [-160, 0, 160], [-10, 0, 10]);
+// Confetti (emoji-based)
+function Confetti({show,onDone}){
+  if(!show) return null;
+  const pieces = Array.from({length:24});
+  return <div style={{position:"fixed", inset:0, pointerEvents:"none"}}>
+    <AnimatePresence>
+      {pieces.map((_,i)=>(
+        <motion.div key={i} initial={{opacity:0, y:-20, x: (i*40)%window.innerWidth}}
+          animate={{opacity:1, y:window.innerHeight+60, x: ((i*40)%window.innerWidth)+((i%2?1:-1)*60)}}
+          transition={{duration:1.2 + (i%5)*0.1, ease:"easeOut"}}
+          onAnimationComplete={i===pieces.length-1?onDone:undefined}
+          style={{position:"absolute"}}>🎉</motion.div>
+      ))}
+    </AnimatePresence>
+  </div>;
+}
+
+function SwipeCard({ text, onSwipeLeft, onSwipeRight, helper="Swipe → for Yes, ← for No" }){
+  const x = useMotionValue(0); const rotate = useTransform(x, [-160, 0, 160], [-10, 0, 10]);
   const threshold = 120; const power = 800;
   const fling = (dir)=>{ const target = (dir>0 ? window.innerWidth : -window.innerWidth) + 240; x.stop(); x.set(target); dir>0?onSwipeRight():onSwipeLeft(); setTimeout(()=>x.set(0),0); };
   return <div className="relative">
     <motion.div style={{ x, rotate }} className="card p-6 sm:p-8" drag="x" dragConstraints={{left:0,right:0}} dragElastic={0.2}
       onDragEnd={(e, info)=>{ const X=info.offset.x, V=info.velocity.x; if(X>threshold||V>power){ fling(1); } else if(X<-threshold||V<-power){ fling(-1);} else { x.set(0);} }}>
       <div className="min-h-[120px] sm:min-h-[140px] flex items-center"><h2 className="text-xl sm:text-2xl font-black tracking-tight">{text}</h2></div>
+      <div className="mt-3 text-xs text-muted">{helper}</div>
     </motion.div>
   </div>;
 }
@@ -63,21 +78,20 @@ function Questionnaire({ questions, onFinish }){
   useEffect(()=>{ const current=load()||{}; const score=answers.filter(Boolean).length; save({...current, quiz:{answers,score}}); },[answers]);
   const record=(val)=>{ const next=[...answers]; next[i]=val; setAnswers(next); setI(i+1); };
   if(done) return <div className="max-w-sm mx-auto px-5 py-14"><Card className="p-8 text-center">
-    <div className="chip inline-block mb-3 neon">Ready</div>
-    <h2 className="text-2xl font-black mb-2">We've got a starting point</h2>
-    <p className="text-muted mb-4">Based on your answers we’ll recommend a track.</p>
+    <div className="chip inline-block mb-3 neon">Nice run</div>
+    <h2 className="text-2xl font-black mb-2">We’ve got your starting line</h2>
+    <p className="text-muted mb-4">We’ll pick a track that fits your answers. You can switch when you finish it.</p>
     <Button onClick={()=>onFinish(answers.filter(Boolean).length)}>See recommendation</Button></Card></div>;
   return <div className="max-w-sm mx-auto px-5 py-12 select-none">
     <div className="flex items-center justify-between mb-4">
       <div className="chip">Question {i+1}/{questions.length}</div>
-      <div className="w-40"><ProgressBar value={(i/questions.length)*100} /></div>
+      <div className="w-40"><ProgressBar value={(i/questions.length)*100} flash /></div>
     </div>
     <SwipeCard key={q.text} text={q.text} onSwipeLeft={()=>record(false)} onSwipeRight={()=>record(true)} />
     <div className="mt-6 grid grid-cols-2 gap-3">
       <Button onClick={()=>record(true)}>Yes</Button>
       <Button variant="outline" onClick={()=>record(false)}>No</Button>
     </div>
-    <div className="mt-3 text-center text-xs text-muted">Tip: drag the card → for Yes or ← for No</div>
   </div>;
 }
 
@@ -86,15 +100,15 @@ function Home({ onPrimary, onSecondary, isNewUser, recommendedTrack }){
     <div className="grid md:grid-cols-2 gap-6 items-stretch">
       <Card className="p-7 md:p-10">
         {isNewUser ? <div className="chip inline-block mb-3 neon">Welcome</div> : <div className="chip inline-block mb-3 neon">{recommendedTrack? "Recommended" : "Welcome back"}</div>}
-        <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-3">{isNewUser ? "Let's start your path" : "Your money, made clear."}</h1>
-        {recommendedTrack ? <p className="text-muted max-w-md">We suggest starting with <span className="font-bold">{recommendedTrack.name}</span>. You can change tracks anytime.</p> : <p className="text-muted max-w-md">Continue where you left off, or start a track tailored to your goals.</p>}
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-3">{isNewUser ? "Let’s start your path" : "Your money, made clear."}</h1>
+        {recommendedTrack ? <p className="text-muted max-w-md">We suggest starting with <span className="font-bold">{recommendedTrack.name}</span>. You’ll unlock other tracks after you complete it.</p> : <p className="text-muted max-w-md">Continue where you left off, or start a track tailored to your goals.</p>}
         <div className="mt-6 flex gap-3">
           <Button onClick={onPrimary}>{isNewUser ? "Start recommended track" : (recommendedTrack ? "Start recommended track" : "Continue learning")}</Button>
           <Button variant="outline" onClick={onSecondary}>{isNewUser ? "Browse all tracks" : "Browse tracks"}</Button>
         </div>
       </Card>
       <Card className="p-7 md:p-10">
-        <h3 className="font-bold mb-2">What you'll get</h3>
+        <h3 className="font-bold mb-2">What you’ll get</h3>
         <ul className="text-sm text-muted list-disc pl-5 space-y-1">
           <li>Short lessons (3–5 min) with quick checks</li>
           <li>Clear progress and weekly goals</li>
@@ -105,16 +119,19 @@ function Home({ onPrimary, onSecondary, isNewUser, recommendedTrack }){
   </div>;
 }
 
-function Tracks({ tracks, onEnterTrack }){
+function Tracks({ tracks, onEnterTrack, allowed }){
   return <div className="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-6">
-    {tracks.map(t=>(<Card key={t.id} className="p-6">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-bold text-lg">{t.name}</h3>
-        <span className="chip">Track</span>
-      </div>
-      <p className="text-muted text-sm mb-4">{t.chapters.length} chapters • {t.chapters.reduce((a,c)=>a+c.lessons.length,0)} lessons</p>
-      <div className="mt-4"><Button onClick={()=>onEnterTrack(t.id)}>Start track</Button></div>
-    </Card>))}
+    {tracks.map(t=>{
+      const locked = allowed!=="all" && t.id!==allowed;
+      return (<Card key={t.id} className={locked?"p-6 locked":"p-6"}>
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="font-bold text-lg">{t.name}</h3>
+          <span className="chip">{locked? "Locked" : "Track"}</span>
+        </div>
+        <p className="text-muted text-sm mb-4">{t.chapters.length} chapters • {t.chapters.reduce((a,c)=>a+c.lessons.length,0)} lessons</p>
+        <div className="mt-4"><Button onClick={()=>!locked && onEnterTrack(t.id)} disabled={locked}>{locked? "Locked" : "Start track"}</Button></div>
+      </Card>);
+    })}
   </div>;
 }
 
@@ -126,40 +143,61 @@ function RunnerHeader({ title, step, total, onQuit }){
         <div className="font-bold truncate">{title}</div>
         <button onClick={onQuit} className="chip">Quit</button>
       </div>
-      <div className="mt-2"><ProgressBar value={pct} /></div>
+      <div className="mt-2"><ProgressBar value={pct} flash /></div>
       <div className="mt-1 text-xs text-muted">{step} / {total}</div>
     </div>
   </div>;
 }
 
-function TrackRunner({ track, onDone, onQuit, updateResume, awardXp }){
-  const lessons = track.chapters.flatMap(c=> c.lessons.map(l=> ({...l, _cid:c.id, _cTitle:c.title})));
-  const [idx,setIdx]=useState(()=>{ const s = load(); const ref = s?.runner?.[track.id]?.index ?? 0; return Math.min(Math.max(0, ref), lessons.length-1); });
-  useEffect(()=>{ const s=load()||{}; save({...s, runner:{ ...(s.runner||{}), [track.id]:{ index: idx } }}); },[idx, track.id]);
-  useEffect(()=>{ updateResume && updateResume({ tid: track.id, cid: lessons[idx]._cid, lid: lessons[idx].id }); },[idx, track.id]);
-  useEffect(()=>{ window.scrollTo({ top: 0, behavior: "auto" }); },[idx]);
-  const current = lessons[idx]; const total = lessons.length; const done = idx >= total;
-  if(done) return <div className="max-w-3xl mx-auto px-5 py-16"><Card className="p-8 text-center"><div className="text-6xl mb-2">🏁</div><h3 className="text-xl font-bold">Track complete</h3><p className="text-muted mb-4">Great run through {track.name}.</p><Button onClick={onDone}>Back to Tracks</Button></Card></div>;
-  return <div>
-    <RunnerHeader title={`${track.name} • ${current._cTitle}`} step={idx+1} total={total} onQuit={onQuit} />
-    <LessonInline key={current.id} lesson={current} onFinish={(earnedXp)=>{ awardXp(earnedXp); if(idx+1<total){ setIdx(idx+1); } else { onDone(); } }} />
-  </div>;
-}
+// Helpers for quick check
+function isYN(labels){ if(!Array.isArray(labels)||labels.length!==2) return false; const a=labels.map(l=>(l||"").toLowerCase()); const set=new Set(a); return (set.has("yes")&&set.has("no"))||(set.has("true")&&set.has("false")); }
 
 function LessonInline({ lesson, onFinish }){
   const [answers,setAnswers]=useState({});
   const [complete,setComplete]=useState(false);
   const [show,setShow]=useState(false);
-  useEffect(()=>{ setAnswers({}); setComplete(false); setShow(false); window.scrollTo({ top:0, behavior:"auto" }); },[lesson?.id]);
+  const [confetti,setConfetti]=useState(false);
+  const [optionMaps,setOptionMaps]=useState([]);
+  useEffect(()=>{
+    setAnswers({}); setComplete(false); setShow(false); window.scrollTo({ top:0, behavior:"auto" }); setConfetti(false);
+    const maps = (lesson.quiz||[]).map(q=>{
+      const labels = Array.isArray(q.labels)? q.labels : ["Yes","No"];
+      if(isYN(labels)){
+        const left = (labels.includes("True")?"True":"Yes");
+        const right = (labels.includes("False")?"False":"No");
+        let correctIndex = 0;
+        if(typeof q.correct === "number"){ correctIndex = q.correct; }
+        else{
+          const first = labels[0];
+          correctIndex = (first.toLowerCase()===left.toLowerCase())?0:1;
+        }
+        return { left, right, correctIndex };
+      }else{
+        const order = Math.random()<0.5? [0,1] : [1,0];
+        const left = labels[order[0]]; const right = labels[order[1]];
+        const correctIndex = (order[0]===0)?0:1;
+        return { left, right, correctIndex };
+      }
+    });
+    setOptionMaps(maps);
+  },[lesson?.id]);
+
   const total = (lesson.quiz||[]).length;
   const allAnswered = (lesson.quiz||[]).every((_,i)=>answers[i]===0||answers[i]===1);
   const choose=(i,idx)=> setAnswers(p=>({...p,[i]:idx}));
-  const finish=()=>{ if(!complete && allAnswered){ setComplete(true); setShow(true); } else { setShow(true); } };
-  const correct = (lesson.quiz||[]).reduce((acc,q,i)=> acc + ((answers[i]??-1)===0?1:0), 0);
+  const finish=()=>{ if(!complete && allAnswered){ setComplete(true); setShow(true); setConfetti(true);} else { setShow(true); } };
+  const correct = (lesson.quiz||[]).reduce((acc,q,i)=> acc + ((answers[i]??-1)=== (optionMaps[i]?.correctIndex ?? 0) ?1:0), 0);
+
   return <div className="max-w-4xl mx-auto px-5 py-8">
     <Card className="p-7">
       <div className="mb-1 text-xs uppercase tracking-wide text-muted">{lesson.title}</div>
       <div className="prose max-w-none">{(lesson.body||[]).map((p,i)=>(<p key={i} className="text-[15px]">{p}</p>))}</div>
+      {Array.isArray(lesson.takeaways)&&lesson.takeaways.length>0 && (
+        <div className="mt-4 p-4 bg-surface rounded-xl">
+          <div className="font-bold mb-1">Key takeaways</div>
+          <ul className="list-disc pl-5 text-sm">{lesson.takeaways.map((t,i)=>(<li key={i}>{t}</li>))}</ul>
+        </div>
+      )}
       {Array.isArray(lesson.learnMore)&&lesson.learnMore.length>0 && (<div className="mt-4 flex flex-wrap gap-3">{lesson.learnMore.map((l,i)=>(<a key={i} href={l.href} target="_blank" rel="noreferrer" className="link text-sm">{l.label}</a>))}</div>)}
     </Card>
     <Card className="p-6 mt-6">
@@ -168,14 +206,15 @@ function LessonInline({ lesson, onFinish }){
         <div key={i} className="mb-4">
           <p className="mb-2">{q.q || q}</p>
           <div className="grid grid-cols-2 gap-2">
-            {[0,1].map(idx=>(
-              <Button key={idx} onClick={()=>choose(i,idx)} variant={(answers[i]===idx)?"primary":"outline"} aria-pressed={answers[i]===idx}>
-                {(q.labels&&q.labels[idx]) || (idx===0?"Yes":"No")}
-              </Button>
-            ))}
+            <Button onClick={()=>choose(i,0)} variant={(answers[i]===0)?"primary":"outline"} aria-pressed={answers[i]===0}>{optionMaps[i]?.left || (isYN(q.labels)? (q.labels?.includes("True")?"True":"Yes") : q.labels?.[0] || "Yes")}</Button>
+            <Button onClick={()=>choose(i,1)} variant={(answers[i]===1)?"primary":"outline"} aria-pressed={answers[i]===1}>{optionMaps[i]?.right || (isYN(q.labels)? (q.labels?.includes("False")?"False":"No") : q.labels?.[1] || "No")}</Button>
           </div>
           {answers[i]!==undefined && (
-            <div className="mt-2 text-sm">{answers[i]===0 ? <span className="text-emerald-600">Correct</span> : <span className="text-rose-600">Incorrect</span>}</div>
+            <div className="mt-2 text-sm">
+              {answers[i] === (optionMaps[i]?.correctIndex ?? 0)
+                ? <span className="text-emerald-600">Correct!</span>
+                : <span className="text-rose-600">Try again</span>}
+            </div>
           )}
         </div>
       ))}
@@ -198,16 +237,52 @@ function LessonInline({ lesson, onFinish }){
         </motion.div>
       )}
     </AnimatePresence>
+
+    <Confetti show={confetti} onDone={()=>setConfetti(false)} />
   </div>;
 }
 
 function useGame(){
-  const [game,setGame]=useState(()=> (load()?.game) || { xp:0, streak:0, lastActive:null, badges:[], weekly: { target:5, completed:0 }, lastActiveRef:null });
-  useEffect(()=>{ const today=new Date().toDateString(); const y=new Date(Date.now()-86400000).toDateString(); if(game.lastActive!==today){ const n=game.lastActive===y?(game.streak||0)+1:1; setGame(g=>({ ...g, lastActive:today, streak:n })); } },[]);
+  const [game,setGame]=useState(()=> (load()?.game) || { xp:0, streak:0, lastActive:null, badges:[], weekly: { target:5, completed:0 }, lastActiveRef:null, allowedTrack:null, completedTracks:[] });
+  useEffect(()=>{
+    const today=new Date().toDateString();
+    const y=new Date(Date.now()-86400000).toDateString();
+    if(game.lastActive!==today){
+      const n=game.lastActive===y?(game.streak||0)+1:1;
+      setGame(g=>({ ...g, lastActive:today, streak:n }));
+    }
+  },[]);
   useEffect(()=>{ const s=load()||{}; save({...s, game}); },[game]);
   const awardXp = (amt)=> setGame(g=>({ ...g, xp:(g.xp||0)+amt, badges: Array.from(new Set([...(g.badges||[]), "First Steps"])).filter(Boolean) }));
   const setLastActiveRef = (ref)=> setGame(g=>({ ...g, lastActiveRef: ref }));
-  return { game, awardXp, setLastActiveRef };
+  const setAllowedTrack = (tid)=> setGame(g=>({ ...g, allowedTrack: tid }));
+  const markTrackComplete = (tid)=> setGame(g=>({ ...g, completedTracks: Array.from(new Set([...(g.completedTracks||[]), tid])), allowedTrack: "all" }));
+  return { game, awardXp, setLastActiveRef, setAllowedTrack, markTrackComplete };
+}
+
+function TracksLockedGate({recommendedId}){
+  return <Card className="p-6">
+    <h3 className="font-bold mb-1">Tracks are locked</h3>
+    <p className="text-sm text-muted">Finish the recommended track to unlock all tracks. Your recommendation: <span className="font-bold">{recommendedId}</span>.</p>
+  </Card>;
+}
+
+function TrackRunner({ track, onDone, onQuit, updateResume, awardXp, markComplete }){
+  const lessons = track.chapters.flatMap(c=> c.lessons.map(l=> ({...l, _cid:c.id, _cTitle:c.title}))).slice(0,25);
+  const [idx,setIdx]=useState(()=>{
+    const s = load();
+    const ref = s?.runner?.[track.id]?.index ?? 0;
+    return Math.min(Math.max(0, ref), lessons.length-1);
+  });
+  useEffect(()=>{ const s=load()||{}; save({...s, runner:{ ...(s.runner||{}), [track.id]:{ index: idx } }}); },[idx, track.id]);
+  useEffect(()=>{ updateResume && updateResume({ tid: track.id, cid: lessons[idx]._cid, lid: lessons[idx].id }); },[idx, track.id]);
+  useEffect(()=>{ window.scrollTo({ top: 0, behavior: "auto" }); },[idx]);
+  const current = lessons[idx]; const total = lessons.length; const done = idx >= total;
+  if(done) return <div className="max-w-3xl mx-auto px-5 py-16"><Card className="p-8 text-center"><div className="text-6xl mb-2">🏁</div><h3 className="text-xl font-bold">Track complete</h3><p className="text-muted mb-4">Great run through {track.name}. All tracks are now unlocked.</p><Button onClick={()=>{ markComplete && markComplete(track.id); onDone(); }}>Back to Tracks</Button></Card></div>;
+  return <div>
+    <RunnerHeader title={`${track.name} • ${current._cTitle}`} step={idx+1} total={total} onQuit={onQuit} />
+    <LessonInline key={current.id} lesson={current} onFinish={(earnedXp)=>{ awardXp(earnedXp); if(idx+1<total){ setIdx(idx+1); } else { markComplete && markComplete(track.id); onDone(); } }} />
+  </div>;
 }
 
 function Progress(){
@@ -215,12 +290,13 @@ function Progress(){
   const xp = state?.game?.xp || 0;
   const streak = state?.game?.streak || 1;
   const last = state?.game?.lastActiveRef?.tid || "—";
+  const completed = (state?.game?.completedTracks||[]).length || 0;
   return <div className="max-w-5xl mx-auto px-5 py-12">
     <h2 className="text-2xl font-black tracking-tight mb-6">Progress</h2>
     <div className="grid md:grid-cols-4 gap-4">
       <Card className="p-6 col-span-2"><p className="text-sm text-muted mb-2">XP</p><div className="text-3xl font-black">{xp}</div></Card>
       <Card className="p-6"><p className="text-sm text-muted mb-2">Streak</p><div className="text-3xl font-black">{streak}d</div></Card>
-      <Card className="p-6"><p className="text-sm text-muted mb-2">Last track</p><div className="text-sm">{last}</div></Card>
+      <Card className="p-6"><p className="text-sm text-muted mb-2">Tracks completed</p><div className="text-3xl font-black">{completed}</div></Card>
     </div>
   </div>;
 }
@@ -256,55 +332,63 @@ function Account({onRedoOnboarding}){
 export default function App(){
   const [route,setRoute]=useState("home");
   const [activeTrackId,setActiveTrackId]=useState(null);
-  const [recommendedId,setRecommendedId]=useState(()=>{
-    const s=load(); const sc=s?.quiz?.score; return typeof sc==="number"? recommendTrack(sc): null;
-  });
-  const { game, awardXp, setLastActiveRef } = useGame();
+  const [recommendedId,setRecommendedId]=useState(()=>{ const s=load(); const sc=s?.quiz?.score; return typeof sc==="number"? recommendTrack(sc): null; });
+  const { game, awardXp, setLastActiveRef, setAllowedTrack, markTrackComplete } = useGame();
 
   const getTrack = (id)=> TRACKS.find(t=>t.id===id);
   const lastRef = load()?.game?.lastActiveRef;
 
-  useEffect(()=>{ const s=load(); if(!s?.quiz){ setRoute("quiz"); } },[]);
+  useEffect(()=>{
+    const s=load()||{};
+    if(!s?.quiz){ setRoute("quiz"); }
+    else{
+      if(!s?.game?.allowedTrack){
+        const allowed = s?.recommendedId || recommendTrack(s?.quiz?.score||0);
+        save({ ...s, game: { ...(s.game||{}), allowedTrack: allowed } });
+      }
+    }
+  },[]);
 
   const handleQuizFinish = (score)=>{
     const id=recommendTrack(score);
     setRecommendedId(id);
-    const s=load()||{}; save({...s, quiz:{ ...(s.quiz||{}), score }, recommendedId: id});
+    const s=load()||{};
+    save({...s, quiz:{ ...(s.quiz||{}), score }, recommendedId: id, game: { ...(s.game||{}), allowedTrack: id }});
+    setAllowedTrack(id);
     setRoute("home");
   };
 
   const isNewUser = !lastRef;
+  const allowed = (load()?.game?.allowedTrack) || recommendedId;
 
   return <div className="min-h-screen">
     <Header onNav={(r)=>setRoute(r)} />
 
     {route==="quiz" && <Questionnaire questions={[
-      { text: "Do you keep a monthly budget?" },
-      { text: "Do you have an emergency fund?" },
-      { text: "Have you contributed to a TFSA?" },
-      { text: "Do you know the difference between a TFSA and an RRSP?" },
+      { text: "Quick gut check: do you keep a monthly budget?" },
+      { text: "Emergency pad set aside—yes or not yet?" },
+      { text: "Have you ever contributed to a TFSA?" },
+      { text: "TFSA vs RRSP—do you know the key differences?" },
       { text: "Have you bought stocks, ETFs, or mutual funds before?" },
-      { text: "Do you understand diversification?" },
-      { text: "Have you filed your own taxes?" },
-      { text: "Do you understand how credit scores work?" },
-      { text: "Have you compared MERs/fees between funds?" },
+      { text: "Diversification—does the concept make sense to you?" },
+      { text: "Have you filed your own taxes at least once?" },
+      { text: "Credit scores: do you know the basics?" },
+      { text: "Have you ever compared MERs/fees between funds?" },
       { text: "Do you know what an index fund is?" }
     ]} onFinish={handleQuizFinish} />}
 
     {route==="home" && <Home
       isNewUser={isNewUser}
-      recommendedTrack={recommendedId ? getTrack(recommendedId) : null}
+      recommendedTrack={allowed ? getTrack(allowed) : null}
       onPrimary={()=>{
-        if(isNewUser && recommendedId){ setActiveTrackId(recommendedId); setRoute("runner"); }
-        else if(recommendedId && !lastRef){ setActiveTrackId(recommendedId); setRoute("runner"); }
-        else {
-          if(lastRef){ setActiveTrackId(lastRef.tid); setRoute("runner"); } else { setRoute("tracks"); }
-        }
+        const tid = allowed || (lastRef? lastRef.tid : null);
+        if(tid){ setActiveTrackId(tid); setRoute("runner"); }
+        else { setRoute("tracks"); }
       }}
       onSecondary={()=> setRoute("tracks")}
     />}
 
-    {route==="tracks" && <Tracks tracks={TRACKS} onEnterTrack={(tid)=>{ setActiveTrackId(tid); setRoute("runner"); }} />}
+    {route==="tracks" && <Tracks tracks={TRACKS} allowed={allowed || "all"} onEnterTrack={(tid)=>{ setActiveTrackId(tid); setRoute("runner"); }} />}
 
     {route==="runner" && activeTrackId && (
       <TrackRunner
@@ -313,6 +397,7 @@ export default function App(){
         updateResume={(ref)=> setLastActiveRef(ref)}
         onQuit={()=> setRoute("tracks")}
         onDone={()=> setRoute("progress")}
+        markComplete={(tid)=> markTrackComplete(tid)}
       />
     )}
 

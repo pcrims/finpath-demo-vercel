@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{ font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans;
-   letter-spacing:-0.01em; }
+*{ font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans; letter-spacing:-0.01em; }
 html, body, #root{ height:100% }
 .text-muted{ color: theme('colors.mute') }
 .card{ background: white; border-radius:1.25rem; box-shadow: theme('boxShadow.depth') }
@@ -14,9 +13,11 @@ html, body, #root{ height:100% }
 .btn-outline{ border:1px solid black; color:black }
 .btn-ghost{ color:black; background:transparent }
 .chip{ border-radius:999px; background: theme('colors.chip'); padding:.55rem .9rem; font-weight:700 }
-.prose p{ margin:.75rem 0; line-height:1.6 }
+.prose p{ margin:.75rem 0; line-height:1.65 }
 a.link{ color:#111; border-bottom:1px solid rgba(0,0,0,.15); text-decoration:none }
 a.link:hover{ opacity:.85 }
 .neon{ background: theme('colors.neon') }
-.input{ border:1px solid rgba(0,0,0,.12); border-radius:.9rem; padding:.75rem 1rem; width:100% }
-.label{ font-size:.8rem; color: theme('colors.mute'); margin-bottom:.35rem; display:block }
+.kbd{ border-radius:.6rem; background:#111; color:#fff; padding:.1rem .4rem; font-size:.7rem }
+.pulse{ animation: pulse 0.9s ease }
+@keyframes pulse{ 0%{ transform:scale(1)} 50%{ transform:scale(1.02)} 100%{ transform:scale(1)} }
+.locked{ opacity:.45; pointer-events:none }

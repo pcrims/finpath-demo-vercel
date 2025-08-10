@@ -11,9 +11,7 @@ export default {
         chip: "#ECEEF1",
         surface: "#F7F8F9"
       },
-      boxShadow: {
-        depth: "0 18px 44px rgba(0,0,0,.08), 0 2px 10px rgba(0,0,0,.05)"
-      },
+      boxShadow: { depth: "0 18px 44px rgba(0,0,0,.08), 0 2px 10px rgba(0,0,0,.05)" },
       borderRadius: { xl2: "1.25rem", pill: "999px" }
     }
   },
