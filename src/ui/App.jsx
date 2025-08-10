@@ -1,19 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "framer-motion";
 
-const APP_KEY = "finpath:runner:v1.4";
-
-const THEMES = {
-  foundations: { hue:"#D8FF3F" },
-  "investing-basics": { hue:"#B8E62E" },
-  advanced: { hue:"#D8FF3F" }
-};
+const APP_KEY = "finpath:runner:v1.5";
 
 function load(){ try{ return JSON.parse(localStorage.getItem(APP_KEY))||null; }catch{ return null; } }
 function save(s){ try{ localStorage.setItem(APP_KEY, JSON.stringify(s)); }catch{} }
 function clsx(...c){ return c.filter(Boolean).join(" "); }
 
-// Build 25 lessons per chapter (placeholder content; to be expanded)
+// 25 lessons per chapter (placeholder content)
 function makeLessons(prefix, baseXp=10){
   const items = [];
   for(let i=1;i<=25;i++){
@@ -47,6 +41,12 @@ const TRACKS = [
   ]}
 ];
 
+function recommendTrack(score){
+  if(score<=3) return "foundations";
+  if(score<=7) return "investing-basics";
+  return "advanced";
+}
+
 function Card({children,className,style}){ return <div className={clsx("card", className)} style={style}>{children}</div>; }
 function Button({children,onClick,variant="primary",className,disabled}){
   const base="btn text-sm";
@@ -74,23 +74,6 @@ function Header({onNav}){
   </div>;
 }
 
-// Deterministic SVG illustrations per seed (neon accent)
-function Illustration({ seed="x" }){
-  const code = [...seed].reduce((a,c)=>a+c.charCodeAt(0),0);
-  const colors = ["#000","#2F3337","#D8FF3F","#B8E62E"];
-  const N=6; const shapes=[];
-  for(let i=0;i<N;i++){
-    const r=((code*(i+3))%100)/100;
-    shapes.push({ x:8+r*80, y:12+((code*i)%50), w:20+((code*i)%30), h:8+((code*(i+7))%18), c:colors[i%colors.length], rx:10 });
-  }
-  return <svg viewBox="0 0 100 70" className="w-full h-40 round-big" aria-hidden>
-    <rect x="0" y="0" width="100" height="70" fill="#F3F4F6" rx="18" />
-    {shapes.map((s,i)=>(<rect key={i} x={s.x} y={s.y} width={s.w} height={s.h} fill={s.c} rx={s.rx} opacity=".9" />))}
-    <circle cx={(code%60)+20} cy="18" r="6" fill="#D8FF3F" />
-  </svg>;
-}
-
-// Onboarding questionnaire
 function SwipeCard({ text, onSwipeLeft, onSwipeRight }){
   const x = useMotionValue(0);
   const rotate = useTransform(x, [-160, 0, 160], [-10, 0, 10]);
@@ -110,12 +93,14 @@ function Questionnaire({ questions, onFinish }){
   useEffect(()=>{ const s=load(); if(s?.quiz){ setI(questions.length); setAnswers(s.quiz.answers||[]);} },[]);
   useEffect(()=>{ const current=load()||{}; const score=answers.filter(Boolean).length; save({...current, quiz:{answers,score}}); },[answers]);
   const record=(val)=>{ const next=[...answers]; next[i]=val; setAnswers(next); setI(i+1); };
-  if(done) return <div className="max-w-sm mx-auto px-5 py-14"><Card className="p-8 text-center"><div className="text-6xl mb-2">🧭</div><h2 className="text-2xl font-black mb-2">You're set!</h2><p className="text-muted mb-4">We’ll recommend a starting point based on your answers.</p><Button onClick={()=>onFinish(answers.filter(Boolean).length)}>See recommendation</Button></Card></div>;
+  if(done) return <div className="max-w-sm mx-auto px-5 py-14"><Card className="p-8 text-center">
+    <div className="chip inline-block mb-3 neon">Ready</div>
+    <h2 className="text-2xl font-black mb-2">We've got a starting point</h2>
+    <p className="text-muted mb-4">Based on your answers we’ll recommend a track.</p>
+    <Button onClick={()=>onFinish(answers.filter(Boolean).length)}>See recommendation</Button></Card></div>;
   return <div className="max-w-sm mx-auto px-5 py-12 select-none">
     <div className="flex items-center justify-between mb-4">
-      <div className="flex items-center gap-2">
-        <span className="chip">Question {i+1}/{questions.length}</span>
-      </div>
+      <div className="chip">Question {i+1}/{questions.length}</div>
       <div className="w-40"><ProgressBar value={(i/questions.length)*100} /></div>
     </div>
     <SwipeCard key={q.text} text={q.text} onSwipeLeft={()=>record(false)} onSwipeRight={()=>record(true)} />
@@ -123,40 +108,44 @@ function Questionnaire({ questions, onFinish }){
       <Button onClick={()=>record(true)}>Yes</Button>
       <Button variant="outline" onClick={()=>record(false)}>No</Button>
     </div>
-    <div className="mt-3 text-center text-xs text-muted">Tip: drag the card <span className="kbd">→</span> for Yes or <span className="kbd">←</span> for No</div>
+    <div className="mt-3 text-center text-xs text-muted">Tip: drag the card → for Yes or ← for No</div>
   </div>;
 }
 
-function Home({ onContinue }){
+function Home({ onPrimary, onSecondary, isNewUser, recommendedTrack }){
   return <div className="max-w-6xl mx-auto px-5 py-10">
     <div className="grid md:grid-cols-2 gap-6 items-stretch">
       <Card className="p-7 md:p-10">
-        <div className="chip inline-block mb-3 bg-neon">Mobile-first learning</div>
-        <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-3">Your money, made clear.</h1>
-        <p className="text-muted max-w-md">Continue where you left off, or start a track tailored to your goals.</p>
-        <div className="mt-6 flex gap-3"><Button onClick={onContinue}>Continue learning</Button><Button variant="outline" onClick={onContinue}>Browse tracks</Button></div>
+        {isNewUser ? <div className="chip inline-block mb-3 neon">Welcome</div> : <div className="chip inline-block mb-3 neon">{recommendedTrack? "Recommended" : "Welcome back"}</div>}
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-3">{isNewUser ? "Let's start your path" : "Your money, made clear."}</h1>
+        {recommendedTrack ? <p className="text-muted max-w-md">We suggest starting with <span className="font-bold">{recommendedTrack.name}</span>. You can change tracks anytime.</p> : <p className="text-muted max-w-md">Continue where you left off, or start a track tailored to your goals.</p>}
+        <div className="mt-6 flex gap-3">
+          <Button onClick={onPrimary}>{isNewUser ? "Start recommended track" : (recommendedTrack ? "Start recommended track" : "Continue learning")}</Button>
+          <Button variant="outline" onClick={onSecondary}>{isNewUser ? "Browse all tracks" : "Browse tracks"}</Button>
+        </div>
       </Card>
-      <Card className="p-0 overflow-hidden"><Illustration seed="hero" /></Card>
+      <Card className="p-7 md:p-10">
+        <h3 className="font-bold mb-2">What you'll get</h3>
+        <ul className="text-sm text-muted list-disc pl-5 space-y-1">
+          <li>Short lessons (3–5 min) with quick checks</li>
+          <li>Clear progress and weekly goals</li>
+          <li>Education-only, Canada-focused guidance</li>
+        </ul>
+      </Card>
     </div>
   </div>;
 }
 
 function Tracks({ tracks, onEnterTrack }){
   return <div className="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-3 gap-6">
-    {tracks.map(t=>{
-      return (<Card key={t.id} className="overflow-hidden">
-        <div className="h-2 w-full neon" />
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="font-bold text-lg">{t.name}</h3>
-            <span className="chip">Track</span>
-          </div>
-          <p className="text-muted text-sm mb-4">{t.chapters.length} chapters • {t.chapters.reduce((a,c)=>a+c.lessons.length,0)} lessons</p>
-          <Illustration seed={t.id} />
-          <div className="mt-4"><Button onClick={()=>onEnterTrack(t.id)}>Start track</Button></div>
-        </div>
-      </Card>);
-    })}
+    {tracks.map(t=>(<Card key={t.id} className="p-6">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-bold text-lg">{t.name}</h3>
+        <span className="chip">Track</span>
+      </div>
+      <p className="text-muted text-sm mb-4">{t.chapters.length} chapters • {t.chapters.reduce((a,c)=>a+c.lessons.length,0)} lessons</p>
+      <div className="mt-4"><Button onClick={()=>onEnterTrack(t.id)}>Start track</Button></div>
+    </Card>))}
   </div>;
 }
 
@@ -199,13 +188,10 @@ function LessonInline({ lesson, onFinish }){
   const finish=()=>{ if(!complete && allAnswered){ setComplete(true); setShow(true); } else { setShow(true); } };
   const correct = (lesson.quiz||[]).reduce((acc,q,i)=> acc + ((answers[i]??-1)===0?1:0), 0);
   return <div className="max-w-4xl mx-auto px-5 py-8">
-    <Card className="overflow-hidden">
-      <Illustration seed={lesson.id} />
-      <div className="p-7">
-        <div className="mb-1 text-xs uppercase tracking-wide text-muted">{lesson.title}</div>
-        <div className="prose max-w-none">{(lesson.body||[]).map((p,i)=>(<p key={i} className="text-[15px]">{p}</p>))}</div>
-        {Array.isArray(lesson.learnMore)&&lesson.learnMore.length>0 && (<div className="mt-4 flex flex-wrap gap-3">{lesson.learnMore.map((l,i)=>(<a key={i} href={l.href} target="_blank" rel="noreferrer" className="link text-sm">{l.label}</a>))}</div>)}
-      </div>
+    <Card className="p-7">
+      <div className="mb-1 text-xs uppercase tracking-wide text-muted">{lesson.title}</div>
+      <div className="prose max-w-none">{(lesson.body||[]).map((p,i)=>(<p key={i} className="text-[15px]">{p}</p>))}</div>
+      {Array.isArray(lesson.learnMore)&&lesson.learnMore.length>0 && (<div className="mt-4 flex flex-wrap gap-3">{lesson.learnMore.map((l,i)=>(<a key={i} href={l.href} target="_blank" rel="noreferrer" className="link text-sm">{l.label}</a>))}</div>)}
     </Card>
     <Card className="p-6 mt-6">
       <div className="flex items-center justify-between mb-3"><h3 className="font-bold">Quick Check</h3><span className="chip neon">+{lesson.xp||10} XP</span></div>
@@ -258,21 +244,24 @@ function useGame(){
 export default function App(){
   const [route,setRoute]=useState("home");
   const [activeTrackId,setActiveTrackId]=useState(null);
+  const [recommendedId,setRecommendedId]=useState(()=>{
+    const s=load(); const sc=s?.quiz?.score; return typeof sc==="number"? recommendTrack(sc): null;
+  });
   const { game, awardXp, setLastActiveRef } = useGame();
 
   const getTrack = (id)=> TRACKS.find(t=>t.id===id);
   const lastRef = load()?.game?.lastActiveRef;
 
-  useEffect(()=>{ const s=load(); if(!s?.quiz) setRoute("quiz"); },[]);
+  useEffect(()=>{ const s=load(); if(!s?.quiz){ setRoute("quiz"); } },[]);
 
-  const continueLearning = ()=>{
-    if(lastRef){
-      setActiveTrackId(lastRef.tid);
-      setRoute("runner");
-    }else{
-      setRoute("tracks");
-    }
+  const handleQuizFinish = (score)=>{
+    const id=recommendTrack(score);
+    setRecommendedId(id);
+    const s=load()||{}; save({...s, quiz:{ ...(s.quiz||{}), score }, recommendedId: id});
+    setRoute("home");
   };
+
+  const isNewUser = !lastRef;
 
   return <div className="min-h-screen">
     <Header onNav={(r)=>setRoute(r)} />
@@ -280,12 +269,28 @@ export default function App(){
     {route==="quiz" && <Questionnaire questions={[
       { text: "Do you keep a monthly budget?" },
       { text: "Do you have an emergency fund?" },
+      { text: "Have you contributed to a TFSA?" },
       { text: "Do you know the difference between a TFSA and an RRSP?" },
       { text: "Have you bought stocks, ETFs, or mutual funds before?" },
-      { text: "Do you understand diversification?" }
-    ]} onFinish={()=>setRoute("home")} />}
+      { text: "Do you understand diversification?" },
+      { text: "Have you filed your own taxes?" },
+      { text: "Do you understand how credit scores work?" },
+      { text: "Have you compared MERs/fees between funds?" },
+      { text: "Do you know what an index fund is?" }
+    ]} onFinish={handleQuizFinish} />}
 
-    {route==="home" && <Home onContinue={continueLearning} />}
+    {route==="home" && <Home
+      isNewUser={isNewUser}
+      recommendedTrack={recommendedId ? getTrack(recommendedId) : null}
+      onPrimary={()=>{
+        if(isNewUser && recommendedId){ setActiveTrackId(recommendedId); setRoute("runner"); }
+        else if(recommendedId && !lastRef){ setActiveTrackId(recommendedId); setRoute("runner"); }
+        else {
+          if(lastRef){ setActiveTrackId(lastRef.tid); setRoute("runner"); } else { setRoute("tracks"); }
+        }
+      }}
+      onSecondary={()=> setRoute("tracks")}
+    />}
 
     {route==="tracks" && <Tracks tracks={TRACKS} onEnterTrack={(tid)=>{ setActiveTrackId(tid); setRoute("runner"); }} />}
 
@@ -305,7 +310,7 @@ export default function App(){
         <div className="grid md:grid-cols-4 gap-4">
           <Card className="p-6 col-span-2"><p className="text-sm text-muted mb-2">XP</p><div className="text-3xl font-black">{game.xp||0}</div></Card>
           <Card className="p-6"><p className="text-sm text-muted mb-2">Streak</p><div className="text-3xl font-black">{game.streak||1}d</div></Card>
-          <Card className="p-6"><p className="text-sm text-muted mb-2">Last track</p><div className="text-sm">{lastRef? lastRef.tid : "—"}</div></Card>
+          <Card className="p-6"><p className="text-sm text-muted mb-2">Last track</p><div className="text-sm">{(load()?.game?.lastActiveRef?.tid) || "—"}</div></Card>
         </div>
       </div>
     )}
