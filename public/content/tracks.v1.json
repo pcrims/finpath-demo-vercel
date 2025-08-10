@@ -1,5 +1,5 @@
 {
-  "version": "1.11",
+  "version": "1.12",
   "tracks": [
     {
       "id": "foundations",
@@ -40,14 +40,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "A budget is a plan that allocates income across essentials, wants, and future goals so you decide where each dollar goes.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The lesson recommends tracking only variable expenses and ignoring fixed bills when starting a budget.",
                   "labels": [
                     "True",
                     "False"
@@ -144,14 +144,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "50/30/20 is a starting point that you can tune over time; it is not a law you must follow exactly.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The lesson says to change ratios weekly based on headlines and to chase perfection each month.",
                   "labels": [
                     "True",
                     "False"
@@ -196,14 +196,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "You should first target high\u2011cost, low\u2011joy expenses and preserve low\u2011cost, high\u2011joy items.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The fastest way to save is to cut your favorite low\u2011cost treats before touching unused subscriptions or overpriced plans.",
                   "labels": [
                     "True",
                     "False"
@@ -248,14 +248,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "A sensible first milestone for an emergency fund is around $1,000 before building toward 1\u20133 months of expenses.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "It\u2019s best to invest your emergency fund for higher returns since you rarely need to access it quickly.",
                   "labels": [
                     "True",
                     "False"
@@ -300,14 +300,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "Scheduling savings to move on payday helps you save before lifestyle spending ramps up.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Manual transfers are preferred because automation makes it too easy to save and you might forget to review later.",
                   "labels": [
                     "True",
                     "False"
@@ -352,14 +352,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "Sinking funds break non\u2011monthly costs (like car maintenance or gifts) into monthly contributions, often by dividing the annual amount by 12.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Holidays and maintenance are emergencies, so the lesson recommends using your emergency fund for them instead of planning ahead.",
                   "labels": [
                     "True",
                     "False"
@@ -404,14 +404,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "Weekly limits and a separate card or wallet for \u2018flex\u2019 spending make it easier to stay on target.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The lesson suggests skipping grocery lists to stay flexible and trusting that monthly totals will work out.",
                   "labels": [
                     "True",
                     "False"
@@ -456,14 +456,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "Optimizing large recurring costs (housing, transportation, insurance) creates bigger, more durable savings than tiny cuts.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Canceling coffee and small treats is the primary way to fix an oversized housing or car budget.",
                   "labels": [
                     "True",
                     "False"
@@ -508,14 +508,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for saving?",
+                  "q": "A monthly retro identifies one root cause of drift and one experiment to try next month.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The goal of a monthly retro is to punish overspending and overhaul the entire system at once.",
                   "labels": [
                     "True",
                     "False"
@@ -573,14 +573,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "On\u2011time payment history and low utilization are two of the most important factors in your credit score.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Closing your oldest card and applying for multiple new accounts usually improves your score quickly.",
                   "labels": [
                     "True",
                     "False"
@@ -625,14 +625,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "High\u2011interest consumer debt is typically the first payoff priority compared to low\u2011rate, productive debt.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "A low\u2011rate mortgage and a 22% store card should be treated the same when choosing what to pay down first.",
                   "labels": [
                     "True",
                     "False"
@@ -677,14 +677,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "Listing every debt with balance and APR reveals the most expensive accounts to target first.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "You can skip small store cards in your inventory because they don\u2019t affect your payoff plan much.",
                   "labels": [
                     "True",
                     "False"
@@ -729,14 +729,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "Avalanche minimizes total interest by targeting the highest APR first, while snowball builds momentum by paying the smallest balance first.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Switching strategies every week is recommended so you don\u2019t get bored with your plan.",
                   "labels": [
                     "True",
                     "False"
@@ -781,14 +781,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "Calling early with a concrete proposal can lead to lower APRs or waived fees.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "It\u2019s best to wait until you miss several payments before contacting lenders about options.",
                   "labels": [
                     "True",
                     "False"
@@ -833,14 +833,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "After a transfer, set autopay to finish within the promo period and avoid spending on the old card.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Once you transfer a balance, it\u2019s fine to use the old card again because the debt moved elsewhere.",
                   "labels": [
                     "True",
                     "False"
@@ -885,14 +885,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "Autopaying at least the minimums and keeping utilization low protect your score during payoff.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Closing your oldest accounts during payoff is a good idea because it simplifies your wallet and boosts your score.",
                   "labels": [
                     "True",
                     "False"
@@ -937,14 +937,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "A one\u2011page plan includes your method, a fixed extra payment you can sustain, the payoff order, and relapse guards.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "It\u2019s better to keep your plan in your head so you can change it whenever your mood shifts.",
                   "labels": [
                     "True",
                     "False"
@@ -989,14 +989,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "In a setback, pause extra payments but keep minimums on time, then rebuild your buffer and resume the plan.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "When an unexpected bill hits, stop paying all debts for a while to reduce stress and restart later.",
                   "labels": [
                     "True",
                     "False"
@@ -1041,14 +1041,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for debt?",
+                  "q": "Redirecting the old debt payment into savings or investing helps prevent lifestyle creep and builds wealth.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "After becoming debt\u2011free, you should spend the former payment right away because you\u2019ve earned it.",
                   "labels": [
                     "True",
                     "False"
@@ -1106,14 +1106,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Starting earlier gives compounding more time to work, which can meaningfully increase long\u2011term results.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Waiting a few years doesn\u2019t matter much because compounding only helps at the end.",
                   "labels": [
                     "True",
                     "False"
@@ -1158,14 +1158,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Short\u2011term volatility is normal; a diversified, long\u2011term plan helps you avoid panic selling.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "The lesson recommends checking prices constantly and selling at the first sign of a drop.",
                   "labels": [
                     "True",
                     "False"
@@ -1262,14 +1262,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Your stock/bond mix largely determines your portfolio\u2019s risk and return over time.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Choosing individual hot stocks matters more than your overall asset allocation.",
                   "labels": [
                     "True",
                     "False"
@@ -1314,14 +1314,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Lower fees mean more of your returns remain invested to compound over time.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "A 1% fee difference is trivial and doesn\u2019t affect long\u2011term outcomes.",
                   "labels": [
                     "True",
                     "False"
@@ -1366,14 +1366,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Broad diversification reduces the impact of any single company or sector underperforming.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Concentrating in a few favorite stocks is safer because you can monitor them closely.",
                   "labels": [
                     "True",
                     "False"
@@ -1418,14 +1418,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "A written investment policy and scheduled check\u2011ins help counter emotional decisions.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "Following hot tips and switching strategies monthly is a good way to avoid bias.",
                   "labels": [
                     "True",
                     "False"
@@ -1470,14 +1470,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "Rebalancing nudges holdings back to target weights and enforces buy\u2011low/sell\u2011high behavior.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "You should only add to the most recent winners and ignore target weights to maximize momentum.",
                   "labels": [
                     "True",
                     "False"
@@ -1574,14 +1574,14 @@
               ],
               "quiz": [
                 {
-                  "q": "Does this lesson focus on practical steps for investing?",
+                  "q": "A low\u2011cost, diversified all\u2011in\u2011one fund is a simple way to start and reduce decision fatigue.",
                   "labels": [
                     "True",
                     "False"
                   ]
                 },
                 {
-                  "q": "Does this lesson claim there\u2019s a guaranteed shortcut that removes risk and effort?",
+                  "q": "It\u2019s best to wait for the perfect portfolio design before investing your first dollar.",
                   "labels": [
                     "True",
                     "False"
