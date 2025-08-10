@@ -314,6 +314,9 @@ function Account({onRedoOnboarding}){
       <div className="flex gap-2 flex-wrap">
         <Button onClick={redoQuiz}>Redo questionnaire</Button>
       </div>
+      <div className="mt-3 flex gap-2 flex-wrap">
+        <Button variant="outline" onClick={()=>{ const s=load()||{}; const g = {...(s.game||{}), allowedTrack:"all"}; save({...s, game:g}); alert("All tracks unlocked for this device."); }}>Unlock all tracks (demo)</Button>
+      </div>
     </Card>
     <Card className="p-6 mb-6">
       <h3 className="font-bold mb-2">Data</h3>
