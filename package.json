@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "npm run validate:content && vite build",
     "preview": "vite preview",
-    "validate:content": "node tools/validate-content.js"
+    "validate:content": "node tools/validate-content.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -1,7 +1,7 @@
 // Simple offline cache for core assets and last lessons JSON
 const CACHE = 'finpath-v1';
 self.addEventListener('install', (e)=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['/','/manifest.webmanifest','/public/content/tracks.v1.json'].filter(Boolean))));
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(['/','/manifest.webmanifest','/content/tracks.v1.json'].filter(Boolean))));
   self.skipWaiting();
 });
 self.addEventListener('activate', (e)=>{ e.waitUntil(self.clients.claim()); });
